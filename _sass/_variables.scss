@@ -1,0 +1,52 @@
+/*******************************************************************************
+ * Variables — Zhimin Hu personal site
+ * Palette: warm parchment, deep charcoal, terracotta accent
+ ******************************************************************************/
+
+@use "sass:color";
+
+// ── Palette ──────────────────────────────────────────────────────────────────
+$parchment:        #F8F5F0 !default;   // page background (light)
+$ink:              #2A2520 !default;   // body text (warm near-black)
+$ink-light:        #6B6460 !default;   // secondary text
+$ink-faint:        #B8B0A8 !default;   // dividers, placeholders
+$terracotta:       #8B3A2A !default;   // accent — links, active states
+$terracotta-light: color.adjust($terracotta, $lightness: 36%) !default;
+
+// Dark mode
+$dark-bg:          #1A1714 !default;   // warm black
+$dark-bg-card:     #221F1C !default;
+$dark-text:        #E8E0D5 !default;   // warm cream
+$dark-text-light:  #9E958C !default;
+$dark-accent:      #C96B55 !default;   // lighter terracotta for dark bg
+
+// Legacy aliases (used by components throughout al-folio)
+$white-color:         $parchment !default;
+$black-color:         $ink !default;
+$grey-color:          $ink-light !default;
+$grey-color-light:    color.adjust($ink-light, $lightness: 40%) !default;
+$grey-color-dark:     $dark-bg !default;
+$grey-900:            $dark-bg-card !default;
+$red-color:           $terracotta !default;
+$red-color-dark:      color.adjust($terracotta, $lightness: -8%) !default;
+$blue-color:          $terracotta !default;
+$blue-color-dark:     color.adjust($terracotta, $lightness: -8%) !default;
+$cyan-color:          $dark-accent !default;
+$purple-color:        $terracotta !default;
+
+$code-bg-color-light: rgba($terracotta, 0.06);
+$code-bg-color-dark:  #2A2420 !default;
+
+// Font awesome
+$fa-font-path: "../webfonts";
+
+// Back to top
+$back-to-top-z-index:  10;
+$back-to-top-bottom:   30px;
+$back-to-top-right:    30px;
+$back-to-top-diameter: 36px;
+$back-to-top-height:   $back-to-top-diameter;
+$back-to-top-width:    $back-to-top-diameter;
+
+// Layout
+$max-content-width: 860px !default;

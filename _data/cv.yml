@@ -1,0 +1,72 @@
+cv:
+  name: Zhimin Hu
+  label: Ph.D. Student in Cognition and Brain Science Program
+  email: zhu41@gatech.edu
+  location: Atlanta, GA
+  image: ""
+  summary: Ph.D. student at Georgia Tech working on reasoning and decision-making, language and thought and representational geometry.
+
+  social_networks:
+    - network: GitHub
+      username: zhiminhu
+    - network: Google Scholar
+      username: ""
+
+  sections:
+    Education:
+      - institution: Georgia Institute of Technology
+        location: Atlanta, GA
+        area: Cognition and Brain Science
+        studyType: Ph.D.
+        start_date: 2025
+        end_date: Present
+        highlights:
+          - School of Psychological and Brain Science & Interactive Computing
+          - Advisor: Prof. Sashank Varma
+
+      - institution: University of Wisconsin-Madison
+        location: Madison, WI
+        area: Computer Science
+        studyType: B.S.
+        start_date: 2022
+        end_date: 2024
+        highlights:
+          - Department of Computer Science
+          - Advisor: Prof. Gary Lupyan, Larissa Albantakis and Catherine Marler
+
+    Experience:
+      - company: miHoYo — Inverse Entropy Research Team
+        position: Research Scientist Intern
+        location: Beijing, China
+        start_date: 2025-06
+        end_date: 2025-08
+        highlights:
+          - LLM Agent, Reasoning, Memory System
+
+      - company: Chinese Institute for Brain Research
+        position: Research Assistant
+        location: Beijing, China
+        start_date: 2024-08
+        end_date: 2025-06
+        highlights:
+          - Vision Neuroscience, Computer Vision
+          - Advisor: Prof. Yatang Li
+
+      - company: Zhipu AI (Z.ai)
+        position: Algorithm Engineer Intern
+        location: Beijing, China
+        start_date: 2024-04
+        end_date: 2024-12
+        highlights:
+          - LLM Pretrain & SFT (GLM4 32B, 130B), LoRA Fine-tuning, Agent
+
+    Teaching:
+      - company: Georgia Tech
+        position: Teaching Assistant — PSYC 2012 Introduction to Research Method
+        start_date: 2025-08
+        end_date: 2025-12
+
+      - company: Georgia Tech
+        position: Teaching Assistant — CS 3790 Introduction to Cognitive Science
+        start_date: 2026-01
+        end_date: 2026-08

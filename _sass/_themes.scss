@@ -1,0 +1,150 @@
+/*******************************************************************************
+ * Themes — light (parchment) & dark (warm black)
+ ******************************************************************************/
+@use "variables" as v;
+@use "sass:color";
+
+:root {
+  color-scheme: light;
+  --global-bg-color:              #{v.$parchment};
+  --global-code-bg-color:         #{v.$code-bg-color-light};
+  --global-text-color:            #{v.$ink};
+  --global-text-color-light:      #{v.$ink-light};
+  --global-theme-color:           #{v.$terracotta};
+  --global-hover-color:           #{v.$terracotta};
+  --global-hover-text-color:      #{v.$parchment};
+  --global-footer-bg-color:       #{v.$ink};
+  --global-footer-text-color:     #{v.$ink-faint};
+  --global-footer-link-color:     #{v.$parchment};
+  --global-distill-app-color:     #{v.$ink-light};
+  --global-divider-color:         rgba(42, 37, 32, 0.12);
+  --global-card-bg-color:         #{v.$parchment};
+  --global-highlight-color:       #{v.$terracotta};
+  --global-back-to-top-bg-color:  rgba(42, 37, 32, 0.35);
+  --global-back-to-top-text-color:#{v.$parchment};
+  --global-newsletter-bg-color:   #{v.$parchment};
+  --global-newsletter-text-color: #{v.$ink};
+
+  --global-tip-block:       #3a7d5a;
+  --global-tip-block-bg:    #e8f5ee;
+  --global-tip-block-text:  #1e4a34;
+  --global-tip-block-title: #2d6348;
+  --global-warning-block:   #9a7b00;
+  --global-warning-block-bg:#fffae0;
+  --global-warning-block-text:#5a4800;
+  --global-warning-block-title:#7a6200;
+  --global-danger-block:    #{v.$terracotta};
+  --global-danger-block-bg: #{v.$terracotta-light};
+  --global-danger-block-text: color.adjust(v.$terracotta, $lightness: -20%);
+  --global-danger-block-title:#{v.$terracotta};
+
+  #light-toggle-system { display: inline-block; }
+  #light-toggle-dark   { display: none; }
+  #light-toggle-light  { display: none; }
+  .only-light { display: block; }
+  .only-dark  { display: none; }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+    bottom: v.$back-to-top-bottom;
+    right: v.$back-to-top-right;
+    height: v.$back-to-top-height;
+    width: v.$back-to-top-width;
+    z-index: v.$back-to-top-z-index;
+  }
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --global-bg-color:              #{v.$dark-bg};
+  --global-code-bg-color:         #{v.$code-bg-color-dark};
+  --global-text-color:            #{v.$dark-text};
+  --global-text-color-light:      #{v.$dark-text-light};
+  --global-theme-color:           #{v.$dark-accent};
+  --global-hover-color:           #{v.$dark-accent};
+  --global-hover-text-color:      #{v.$dark-bg};
+  --global-footer-bg-color:       #{v.$dark-bg-card};
+  --global-footer-text-color:     #{v.$dark-text-light};
+  --global-footer-link-color:     #{v.$dark-text};
+  --global-distill-app-color:     #{v.$dark-text-light};
+  --global-divider-color:         rgba(232, 224, 213, 0.1);
+  --global-card-bg-color:         #{v.$dark-bg-card};
+  --global-back-to-top-bg-color:  rgba(232, 224, 213, 0.3);
+  --global-back-to-top-text-color:#{v.$dark-bg};
+  --global-newsletter-bg-color:   #{v.$dark-bg-card};
+  --global-newsletter-text-color: #{v.$dark-text};
+
+  --global-tip-block:       #4a9d72;
+  --global-tip-block-bg:    #1a3d2a;
+  --global-tip-block-text:  #a8dfc0;
+  --global-tip-block-title: #d0f0e0;
+  --global-warning-block:   #d4aa00;
+  --global-warning-block-bg:#3a3000;
+  --global-warning-block-text:#ffe880;
+  --global-warning-block-title:#fff0a0;
+  --global-danger-block:    #{v.$dark-accent};
+  --global-danger-block-bg: rgba(201, 107, 85, 0.15);
+  --global-danger-block-text: color.adjust(v.$dark-accent, $lightness: 15%);
+  --global-danger-block-title:#{v.$dark-accent};
+
+  .only-light { display: none; }
+  .only-dark  { display: block; }
+}
+
+html[data-theme-setting="dark"] {
+  #light-toggle-system { display: none; }
+  #light-toggle-dark   { display: inline-block; }
+  #light-toggle-light  { display: none; }
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
+}
+
+html[data-theme-setting="light"] {
+  #light-toggle-system { display: none; }
+  #light-toggle-dark   { display: none; }
+  #light-toggle-light  { display: inline-block; }
+}
+
+// Dark/light toggle icon — inherited from original
+.fa-half-sun-moon {
+  position: relative;
+  display: inline-block;
+  --fa-font: var(--fa-font-solid);
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 1em;
+  height: 1em;
+}
+.fa-half-sun-moon::before,
+.fa-half-sun-moon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -0.5px;
+  bottom: -0.5px;
+  text-align: center;
+  line-height: 1em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  font: var(--fa-font);
+}
+.fa-half-sun-moon::before {
+  content: "\f111";
+  color: var(--global-text-color);
+  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+}
+.fa-half-sun-moon::after {
+  content: "\f185";
+  color: var(--global-text-color);
+  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
+  right: -1.5px;
+  transform: translateX(-1px);
+}
+#light-toggle:hover .fa-half-sun-moon::before { color: var(--global-theme-color); }
+#light-toggle:hover .fa-half-sun-moon::after  { color: var(--global-theme-color); }

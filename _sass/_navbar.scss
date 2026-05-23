@@ -1,0 +1,145 @@
+/*******************************************************************************
+ * Navigation bar — minimal, borderless, italic name
+ ******************************************************************************/
+@use "variables" as v;
+
+.navbar {
+  box-shadow: none;
+  border-bottom: none;
+  background-color: var(--global-bg-color);
+  opacity: 0.97;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+
+.navbar .dropdown-menu,
+.btn-group.dropdown .dropdown-menu {
+  background-color: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 2px;
+  box-shadow: 0 4px 16px rgba(42,37,32,0.08);
+
+  a:not(.active) { color: var(--global-text-color); }
+  a:hover        { color: var(--global-hover-color); }
+  .dropdown-divider { border-top: 1px solid var(--global-divider-color) !important; }
+}
+
+.dropdown-item {
+  color: var(--global-text-color);
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
+  &:hover {
+    color: var(--global-hover-color);
+    background-color: transparent;
+  }
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--global-hover-color);
+  color: var(--global-hover-text-color) !important;
+}
+
+.navbar.navbar-light {
+  a { &:hover { text-decoration: none; } }
+
+  // Site name — italic, elegant
+  .navbar-brand {
+    color: var(--global-text-color);
+    font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    border-bottom: none;
+    &:hover { color: var(--global-hover-color); }
+  }
+
+  // Nav links — small caps feel, generous spacing
+  .navbar-nav .nav-item .nav-link {
+    color: var(--global-text-color);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.92rem;
+    letter-spacing: 0.07em;
+    text-transform: lowercase;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    border-bottom: none;
+    transition: color 0.18s ease;
+
+    &:hover { color: var(--global-hover-color); }
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    background-color: inherit;
+    font-weight: 500;
+    color: var(--global-theme-color);
+    &:hover { color: var(--global-hover-color); }
+  }
+
+  // Social icons in brand area
+  .navbar-brand.social {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 1.4rem;
+
+    a {
+      img, svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-bottom: 0.4rem;
+      }
+      svg image { width: 1.4rem; height: 1.4rem; }
+      i::before {
+        color: var(--global-text-color-light);
+        transition: color 0.18s ease;
+      }
+      &:hover i::before { color: var(--global-theme-color); }
+    }
+  }
+}
+
+// Hamburger
+.navbar-toggler {
+  .icon-bar {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background-color: var(--global-text-color);
+    border-radius: 1px;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+  }
+  .top-bar    { transform: rotate(45deg); transform-origin: 10% 10%; }
+  .middle-bar { opacity: 0; }
+  .bottom-bar { transform: rotate(-45deg); transform-origin: 10% 90%; }
+}
+.navbar-toggler.collapsed {
+  .top-bar    { transform: rotate(0); }
+  .middle-bar { opacity: 1; }
+  .bottom-bar { transform: rotate(0); }
+}
+
+// Light toggle
+#light-toggle {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color-light);
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover { color: var(--global-hover-color); }
+}
+@media (min-width: 576px) {
+  #light-toggle { transform: translateY(4px); }
+}
+
+#search-toggle {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color-light);
+  &:hover { color: var(--global-hover-color); }
+}

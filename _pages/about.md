@@ -1,0 +1,30 @@
+---
+layout: about
+title: about
+permalink: /
+subtitle: School of Psychological and Brain Science & Interactive Computing at Georgia Tech
+
+profile:
+  align: right
+  image: profile_image.jpg
+  image_circular: false
+  more_info: >
+    <p>Technology Square Research Building</p>
+    <p>Georgia Tech</p>
+    <p>Atlanta, GA 30332</p>
+
+selected_papers: true
+social: true
+
+announcements:
+  enabled: false
+
+latest_posts:
+  enabled: false
+---
+
+I am a Ph.D. student in the [Cognition and Brain Science Program](https://psychology.gatech.edu/research/cognition-brain-science) at Georgia Tech, advised by [Sashank Varma](https://scholar.google.com/citations?user=kq16N1AAAAAJ&hl=en). I received my B.S. in Computer Science from the University of Wisconsin-Madison, where I worked with [Gary Lupyan](https://scholar.google.com/citations?user=5PBkBFgAAAAJ&hl=en), [Larissa Albantakis](https://scholar.google.com/citations?hl=en&user=BMW-qgsAAAAJ&view_op=list_works) and [Catherine Marler](https://scholar.google.com/citations?hl=en&user=hsvalOEAAAAJ&view_op=list_works).
+
+My research sits at the intersection of cognitive science and artificial intelligence, with close collaborations in theoretical neuroscience. I am interested in two related questions. The first concerns sequential reasoning and decision-making: how does memory shape long-horizon inference, and how do humans and language models allocate limited computational resources to achieve extended, goal-directed reasoning? The second concerns the representational geometry of concept: how do minds and models achieve representations that are simultaneously stable and flexible, and do common organizational principles emerge across biological and artificial systems? Alongside this scientific work, I develop agentic systems for long-horizon reasoning and planning.
+
+Before joining Georgia Tech, I worked as a Research Scientist intern at [miHoYo](https://www.mihoyo.com/en/), where I built large-scale agentic memory system for LLM agents. Prior to that, I was an Algorithm Engineer intern at [Zhipu AI](https://www.zhipuai.cn/en/about) contributing to LLM pretraining, SFT, and LoRA finetuning for GLM4, and a Research Assistant at the [Chinese Institute for Brain Research](https://en.cibr.ac.cn/home), advised by [Yatang Li](https://scholar.google.com/citations?user=0dqjyrkAAAAJ&hl=en), working on computational models of the visual cortex.

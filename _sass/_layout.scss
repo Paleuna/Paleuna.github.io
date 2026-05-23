@@ -1,0 +1,70 @@
+/*******************************************************************************
+ * Layout
+ ******************************************************************************/
+@use "variables" as v;
+
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+
+  h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 70px;
+  }
+}
+
+body.fixed-top-nav {
+  padding-top: 62px;
+}
+
+body.sticky-bottom-footer {
+  padding-bottom: 0;
+}
+
+.container {
+  max-width: v.$max-content-width;
+}
+
+// Profile image — softly rounded, not circular
+.profile {
+  img {
+    width: 100%;
+    border-radius: 2px;
+    filter: saturate(0.92) contrast(1.02);
+  }
+}
+
+// Footer
+footer.fixed-bottom {
+  background-color: var(--global-footer-bg-color);
+  font-size: 0.78rem;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.04em;
+
+  .container {
+    color: var(--global-footer-text-color);
+    padding-top: 10px;
+    padding-bottom: 9px;
+    text-align: center;
+  }
+
+  a {
+    color: var(--global-footer-link-color);
+    border-bottom: none;
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
+
+footer.sticky-bottom {
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 0.88rem;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.04em;
+
+  .container { text-align: center; }
+}
