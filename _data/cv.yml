@@ -36,25 +36,28 @@ cv:
       - company: miHoYo — Inverse Entropy Research Team
         position: Research Scientist Intern
         location: Beijing, China
-        start_date: 2025-06
-        end_date: 2025-08
+        start_date: "2025-06"
+        end_date: "2025-08"
         highlights:
-          - Agentic Memory System for LLM agent
-          - Agent Infra
+          - Large-scale Infrastructure for LLM agent
+          - Memory Architecture, Retrieval and Reasoning Flow
+          - Optimization of Interface to Backend  
 
       - company: Chinese Institute for Brain Research
         position: Research Assistant
         location: Beijing, China
-        start_date: 2024-08
-        end_date: 2025-06
+        start_date: "2024-08"
+        end_date: "2025-06"
         highlights:
-          - Computational Modeling of Visual Motion Processing
+          - Computational Modeling of Visual Cortex
+          - Self-supervised Learning of Visual Representations
+          - Neural Alignment, Visual Tuning 
 
       - company: Zhipu AI (Z.ai)
         position: Algorithm Engineer Intern
         location: Beijing, China
-        start_date: 2024-04
-        end_date: 2024-12
+        start_date: "2024-04"
+        end_date: "2024-12"
         highlights:
           - LLM Pretrain & SFT for GLM4(0520) 32B and 130B
           - LLM Agent for Strategic Reasoning in Games
@@ -63,11 +66,13 @@ cv:
 
     Teaching:
       - company: Georgia Tech
-        position: Teaching Assistant — PSYC 2012 Introduction to Research Method
-        start_date: 2025-08
-        end_date: 2025-12
+        location: Atlanta, GA
+        position: PSYC 2012 Introduction to Research Method (TA)
+        start_date: "2025-08"
+        end_date: "2025-12"
 
       - company: Georgia Tech
-        position: Teaching Assistant — CS 3790 Introduction to Cognitive Science
-        start_date: 2026-01
-        end_date: 2026-08
+        location: Atlanta, GA
+        position: CS 3790 Introduction to Cognitive Science (TA)
+        start_date: "2026-01"
+        end_date: "2026-08"

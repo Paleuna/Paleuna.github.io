@@ -1,136 +1,184 @@
 /*******************************************************************************
- * Typography styles: Headings, text, links, tables, blockquotes
+ * Typography — EB Garamond body, Cormorant Garamond display
+ * Using !important where Bootstrap/MDB override us
  ******************************************************************************/
-
 @use "variables" as v;
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-em,
-div,
-li,
-span,
-strong {
-  color: var(--global-text-color);
+// ── Base ─────────────────────────────────────────────────────────────────────
+html {
+  font-size: 17px;
 }
 
-hr {
-  border-top: 1px solid var(--global-divider-color);
+body {
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif !important;
+  font-size: 1.05rem !important;
+  line-height: 1.85 !important;
+  font-feature-settings: "liga" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  color: var(--global-text-color) !important;
+  background-color: var(--global-bg-color) !important;
+  letter-spacing: 0.01em;
 }
 
-table {
-  td,
-  th {
-    font-size: 1rem;
-    padding: 1px 1rem 1px 0;
-  }
-
-  th {
-    font-weight: bold;
-  }
+// ── Headings ─────────────────────────────────────────────────────────────────
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  color: var(--global-text-color) !important;
+  line-height: 1.3 !important;
+  margin-bottom: 0.75rem;
 }
 
-a,
-table.table a {
-  color: var(--global-theme-color);
+h1, .h1 { font-size: 2.2rem !important; font-style: italic; font-weight: 300 !important; letter-spacing: -0.01em; }
+h2, .h2 { font-size: 1.6rem !important; font-style: italic; }
+h3, .h3 { font-size: 1.3rem !important; }
+h4, .h4 { font-size: 1.1rem !important; }
+h5, .h5 { font-size: 1rem !important; }
+
+// Post title on about/pages
+.post-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-weight: 300 !important;
+  font-size: 2.4rem !important;
+  letter-spacing: -0.01em;
+}
+
+// Subtitle under name
+.post-description,
+p.post-description {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 1.1rem !important;
+  font-style: italic;
+  color: var(--global-text-color-light) !important;
+  letter-spacing: 0.02em;
+}
+
+// ── Navbar brand name ────────────────────────────────────────────────────────
+.navbar-brand {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-weight: 300 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.03em;
+}
+
+// ── Nav links ────────────────────────────────────────────────────────────────
+.navbar-nav .nav-link {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: lowercase !important;
+}
+
+// ── Body text elements ───────────────────────────────────────────────────────
+p, li, td, th, span, label, input, textarea, select {
+  font-family: 'EB Garamond', Georgia, serif !important;
+}
+
+// Profile more_info block
+.profile .address p,
+.profile .more-info p {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 0.9rem !important;
+  font-style: italic;
+  color: var(--global-text-color-light) !important;
+  line-height: 1.6 !important;
+}
+
+// ── Links ────────────────────────────────────────────────────────────────────
+a {
+  color: var(--global-theme-color) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    color: var(--global-theme-color);
-    text-decoration: underline;
-  }
-
-  &:hover:after :not(.nav-item.dropdown) {
-    width: 100%;
+    color: var(--global-hover-color) !important;
+    text-decoration: none !important;
+    border-bottom-color: currentColor;
   }
 }
 
-.table-dark {
-  background-color: transparent;
-  &.table-bordered {
-    border: 1px solid var(--global-divider-color) !important;
-  }
+// Navbar links should not have border-bottom
+.navbar a, .navbar a:hover {
+  border-bottom: none !important;
 }
 
+// ── Horizontal rule ──────────────────────────────────────────────────────────
+hr {
+  border: none !important;
+  border-top: 1px solid var(--global-divider-color) !important;
+  margin: 2.5rem 0 !important;
+}
+
+// ── Blockquote ───────────────────────────────────────────────────────────────
 blockquote {
-  background: var(--global-bg-color);
-  border-left: 5px solid var(--global-theme-color);
-  margin: 1.5em 0;
-  padding: 1em;
-  font-size: 1.2rem;
+  border-left: 2px solid var(--global-theme-color) !important;
+  padding: 0.75rem 1.5rem !important;
+  font-style: italic;
+  color: var(--global-text-color-light) !important;
+  margin: 2rem 0 !important;
+  background: transparent !important;
+}
 
-  p {
-    margin-bottom: 0;
+// ── Tables ───────────────────────────────────────────────────────────────────
+table {
+  font-family: 'EB Garamond', serif !important;
+  font-size: 0.97rem !important;
+
+  th {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 0.82rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+  }
+}
+
+// ── Card style used in CV ────────────────────────────────────────────────────
+.card {
+  background-color: var(--global-card-bg-color) !important;
+  border: 1px solid var(--global-divider-color) !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+
+  .card-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.12em !important;
+    font-weight: 500 !important;
+    color: var(--global-text-color-light) !important;
+    font-style: normal !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+// ── Publication entries ──────────────────────────────────────────────────────
+.publications {
+  ol.bibliography li {
+    font-family: 'EB Garamond', serif !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
   }
 
-  /* Tips, warnings, and dangers blockquotes */
-  &.block-tip {
-    border-color: var(--global-tip-block);
-    background-color: var(--global-tip-block-bg);
-
-    em,
-    li,
-    p,
-    strong {
-      color: var(--global-tip-block-text);
-    }
-
-    a,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: var(--global-tip-block-title);
-    }
+  h2.bibliography {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.12em !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    color: var(--global-text-color-light) !important;
   }
+}
 
-  &.block-warning {
-    border-color: var(--global-warning-block);
-    background-color: var(--global-warning-block-bg);
-
-    em,
-    li,
-    p,
-    strong {
-      color: var(--global-warning-block-text);
-    }
-
-    a,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: var(--global-warning-block-title);
-    }
-  }
-
-  &.block-danger {
-    border-color: var(--global-danger-block);
-    background-color: var(--global-danger-block-bg);
-
-    em,
-    li,
-    p,
-    strong {
-      color: var(--global-danger-block-text);
-    }
-
-    a,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: var(--global-danger-block-title);
-    }
-  }
+// ── Footer ───────────────────────────────────────────────────────────────────
+footer {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.05em !important;
 }
