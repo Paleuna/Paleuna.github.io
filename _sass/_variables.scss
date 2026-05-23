@@ -1,52 +1,52 @@
 /*******************************************************************************
- * Variables used throughout the theme.
- * To adjust anything, simply edit the variables below and rebuild the theme.
+ * Variables — Zhimin Hu personal site
+ * Palette: warm parchment, deep charcoal, terracotta accent
  ******************************************************************************/
 
 @use "sass:color";
 
-// Colors
-$red-color: #ff3636 !default;
-$red-color-dark: #b71c1c !default;
-$orange-color: #f29105 !default;
-$blue-color: #0076df !default;
-$blue-color-dark: #00369f !default;
-$cyan-color: #2698ba !default;
-$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #00ab37 !default;
-$green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
-$green-color-light: #ddffdd !default;
-$green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
-$light-purple-color: color.adjust($purple-color, $lightness: 25%);
-$pink-color: #f92080 !default;
-$pink-color-light: #ffdddd !default;
-$yellow-color: #efcc00 !default;
+// ── Palette ──────────────────────────────────────────────────────────────────
+$parchment:        #F8F5F0 !default;   // page background (light)
+$ink:              #2A2520 !default;   // body text (warm near-black)
+$ink-light:        #6B6460 !default;   // secondary text
+$ink-faint:        #B8B0A8 !default;   // dividers, placeholders
+$terracotta:       #8B3A2A !default;   // accent — links, active states
+$terracotta-light: color.adjust($terracotta, $lightness: 36%) !default;
 
-$grey-color: #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
-$grey-900: #212529;
+// Dark mode
+$dark-bg:          #1A1714 !default;   // warm black
+$dark-bg-card:     #221F1C !default;
+$dark-text:        #E8E0D5 !default;   // warm cream
+$dark-text-light:  #9E958C !default;
+$dark-accent:      #C96B55 !default;   // lighter terracotta for dark bg
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+// Legacy aliases (used by components throughout al-folio)
+$white-color:         $parchment !default;
+$black-color:         $ink !default;
+$grey-color:          $ink-light !default;
+$grey-color-light:    color.adjust($ink-light, $lightness: 40%) !default;
+$grey-color-dark:     $dark-bg !default;
+$grey-900:            $dark-bg-card !default;
+$red-color:           $terracotta !default;
+$red-color-dark:      color.adjust($terracotta, $lightness: -8%) !default;
+$blue-color:          $terracotta !default;
+$blue-color-dark:     color.adjust($terracotta, $lightness: -8%) !default;
+$cyan-color:          $dark-accent !default;
+$purple-color:        $terracotta !default;
 
-// Theme colors
+$code-bg-color-light: rgba($terracotta, 0.06);
+$code-bg-color-dark:  #2A2420 !default;
 
-$code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
-
-// Font awesome location
+// Font awesome
 $fa-font-path: "../webfonts";
 
-// Back To Top button config
-$back-to-top-z-index: 10;
-$back-to-top-bottom: 30px;
-$back-to-top-right: 30px;
-$back-to-top-diameter: 40px;
-$back-to-top-height: $back-to-top-diameter;
-$back-to-top-width: $back-to-top-diameter;
+// Back to top
+$back-to-top-z-index:  10;
+$back-to-top-bottom:   30px;
+$back-to-top-right:    30px;
+$back-to-top-diameter: 36px;
+$back-to-top-height:   $back-to-top-diameter;
+$back-to-top-width:    $back-to-top-diameter;
 
-// Max width default
-$max-content-width: 930px !default;
+// Layout
+$max-content-width: 860px !default;
