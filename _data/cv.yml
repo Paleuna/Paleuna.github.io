@@ -22,7 +22,6 @@ cv:
         end_date: Present
         highlights:
           - School of Psychological and Brain Science & Interactive Computing
-          - Advisor: Prof. Sashank Varma
 
       - institution: University of Wisconsin-Madison
         location: Madison, WI
@@ -32,7 +31,6 @@ cv:
         end_date: 2024
         highlights:
           - Department of Computer Science
-          - Advisor: Prof. Gary Lupyan, Larissa Albantakis and Catherine Marler
 
     Experience:
       - company: miHoYo — Inverse Entropy Research Team
@@ -41,7 +39,8 @@ cv:
         start_date: 2025-06
         end_date: 2025-08
         highlights:
-          - LLM Agent, Reasoning, Memory System
+          - Agentic Memory System for LLM agent
+          - Agent Infra
 
       - company: Chinese Institute for Brain Research
         position: Research Assistant
@@ -49,8 +48,7 @@ cv:
         start_date: 2024-08
         end_date: 2025-06
         highlights:
-          - Vision Neuroscience, Computer Vision
-          - Advisor: Prof. Yatang Li
+          - Computational Modeling of Visual Motion Processing
 
       - company: Zhipu AI (Z.ai)
         position: Algorithm Engineer Intern
@@ -58,7 +56,10 @@ cv:
         start_date: 2024-04
         end_date: 2024-12
         highlights:
-          - LLM Pretrain & SFT (GLM4 32B, 130B), LoRA Fine-tuning, Agent
+          - LLM Pretrain & SFT for GLM4(0520) 32B and 130B
+          - LLM Agent for Strategic Reasoning in Games
+          - LoRA Fine-tuning for Text-to-SQL 
+          
 
     Teaching:
       - company: Georgia Tech
