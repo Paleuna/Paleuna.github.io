@@ -1,184 +1,145 @@
 /*******************************************************************************
- * Typography — EB Garamond body, Cormorant Garamond display
- * Using !important where Bootstrap/MDB override us
+ * Typography — Inter headings/nav, Merriweather body
  ******************************************************************************/
 @use "variables" as v;
 
-// ── Base ─────────────────────────────────────────────────────────────────────
-html {
-  font-size: 17px;
-}
-
+// ── Base body ─────────────────────────────────────────────────────────────────
 body {
-  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif !important;
-  font-size: 1.05rem !important;
-  line-height: 1.85 !important;
-  font-feature-settings: "liga" 1, "kern" 1;
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 300 !important;
+  line-height: 1.9 !important;
   -webkit-font-smoothing: antialiased;
   color: var(--global-text-color) !important;
   background-color: var(--global-bg-color) !important;
-  letter-spacing: 0.01em;
 }
 
-// ── Headings ─────────────────────────────────────────────────────────────────
+// ── Headings — Inter ──────────────────────────────────────────────────────────
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
-  font-weight: 400 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500 !important;
   color: var(--global-text-color) !important;
-  line-height: 1.3 !important;
-  margin-bottom: 0.75rem;
-}
-
-h1, .h1 { font-size: 2.2rem !important; font-style: italic; font-weight: 300 !important; letter-spacing: -0.01em; }
-h2, .h2 { font-size: 1.6rem !important; font-style: italic; }
-h3, .h3 { font-size: 1.3rem !important; }
-h4, .h4 { font-size: 1.1rem !important; }
-h5, .h5 { font-size: 1rem !important; }
-
-// Post title on about/pages
-.post-title {
-  font-family: 'Cormorant Garamond', serif !important;
-  font-style: italic !important;
-  font-weight: 300 !important;
-  font-size: 2.4rem !important;
+  line-height: 1.25 !important;
   letter-spacing: -0.01em;
 }
 
-// Subtitle under name
-.post-description,
-p.post-description {
-  font-family: 'Cormorant Garamond', serif !important;
-  font-size: 1.1rem !important;
-  font-style: italic;
-  color: var(--global-text-color-light) !important;
-  letter-spacing: 0.02em;
-}
+h1, .h1 { font-size: 1.8rem !important; font-weight: 400 !important; }
+h2, .h2 { font-size: 1.3rem !important; }
+h3, .h3 { font-size: 1.1rem !important; }
+h4, .h4 { font-size: 1rem !important; }
 
-// ── Navbar brand name ────────────────────────────────────────────────────────
-.navbar-brand {
-  font-family: 'Cormorant Garamond', serif !important;
-  font-style: italic !important;
+// Name on about page
+.post-title {
+  font-family: 'Inter', sans-serif !important;
   font-weight: 300 !important;
-  font-size: 1.3rem !important;
-  letter-spacing: 0.03em;
+  font-size: 2rem !important;
+  letter-spacing: -0.02em !important;
 }
 
-// ── Nav links ────────────────────────────────────────────────────────────────
-.navbar-nav .nav-link {
-  font-family: 'Cormorant Garamond', serif !important;
-  font-size: 0.95rem !important;
-  letter-spacing: 0.08em !important;
+// Subtitle
+.post-description, p.post-description {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 400 !important;
+  color: var(--global-text-color-light) !important;
+  letter-spacing: 0.01em;
+}
+
+// ── Navbar ────────────────────────────────────────────────────────────────────
+.navbar-brand {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.01em !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
   text-transform: lowercase !important;
 }
 
-// ── Body text elements ───────────────────────────────────────────────────────
-p, li, td, th, span, label, input, textarea, select {
-  font-family: 'EB Garamond', Georgia, serif !important;
+// ── Body text ─────────────────────────────────────────────────────────────────
+p, li {
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-weight: 300 !important;
 }
 
-// Profile more_info block
-.profile .address p,
-.profile .more-info p {
-  font-family: 'Cormorant Garamond', serif !important;
-  font-size: 0.9rem !important;
-  font-style: italic;
-  color: var(--global-text-color-light) !important;
-  line-height: 1.6 !important;
-}
-
-// ── Links ────────────────────────────────────────────────────────────────────
-a {
-  color: var(--global-theme-color) !important;
-  text-decoration: none !important;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
+// ── Links ─────────────────────────────────────────────────────────────────────
+a, table.table a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  transition: color 0.18s ease;
 
   &:hover {
-    color: var(--global-hover-color) !important;
-    text-decoration: none !important;
-    border-bottom-color: currentColor;
+    color: var(--global-hover-color);
+    text-decoration: none;
   }
 }
 
-// Navbar links should not have border-bottom
 .navbar a, .navbar a:hover {
   border-bottom: none !important;
 }
 
-// ── Horizontal rule ──────────────────────────────────────────────────────────
-hr {
-  border: none !important;
-  border-top: 1px solid var(--global-divider-color) !important;
-  margin: 2.5rem 0 !important;
-}
-
-// ── Blockquote ───────────────────────────────────────────────────────────────
-blockquote {
-  border-left: 2px solid var(--global-theme-color) !important;
-  padding: 0.75rem 1.5rem !important;
-  font-style: italic;
-  color: var(--global-text-color-light) !important;
-  margin: 2rem 0 !important;
-  background: transparent !important;
-}
-
-// ── Tables ───────────────────────────────────────────────────────────────────
-table {
-  font-family: 'EB Garamond', serif !important;
-  font-size: 0.97rem !important;
-
-  th {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 0.82rem !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.1em !important;
-    font-weight: 500 !important;
-    font-style: normal !important;
-  }
-}
-
-// ── Card style used in CV ────────────────────────────────────────────────────
+// ── CV cards ──────────────────────────────────────────────────────────────────
 .card {
-  background-color: var(--global-card-bg-color) !important;
-  border: 1px solid var(--global-divider-color) !important;
   border-radius: 2px !important;
   box-shadow: none !important;
 
   .card-title {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 0.8rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.72rem !important;
     text-transform: uppercase !important;
     letter-spacing: 0.12em !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     color: var(--global-text-color-light) !important;
-    font-style: normal !important;
     margin-bottom: 1rem !important;
   }
 }
 
-// ── Publication entries ──────────────────────────────────────────────────────
+// ── Publications ──────────────────────────────────────────────────────────────
 .publications {
   ol.bibliography li {
-    font-family: 'EB Garamond', serif !important;
-    font-size: 1rem !important;
-    line-height: 1.7 !important;
+    font-family: 'Merriweather', Georgia, serif !important;
+    font-size: 0.88rem !important;
+    font-weight: 300 !important;
+    line-height: 1.8 !important;
   }
 
   h2.bibliography {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 0.8rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.72rem !important;
     text-transform: uppercase !important;
     letter-spacing: 0.12em !important;
-    font-style: italic !important;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
     color: var(--global-text-color-light) !important;
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
   }
 }
 
-// ── Footer ───────────────────────────────────────────────────────────────────
+// ── Blockquote ────────────────────────────────────────────────────────────────
+blockquote {
+  border-left: 2px solid var(--global-theme-color);
+  padding-left: 1.2rem;
+  font-style: italic;
+  color: var(--global-text-color-light);
+  p { margin-bottom: 0; }
+}
+
+// ── HR ────────────────────────────────────────────────────────────────────────
+hr {
+  border-top: 1px solid var(--global-divider-color);
+  margin: 2rem 0;
+}
+
+// ── Footer ────────────────────────────────────────────────────────────────────
 footer {
-  font-family: 'Cormorant Garamond', serif !important;
-  font-size: 0.82rem !important;
-  letter-spacing: 0.05em !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.03em !important;
 }
