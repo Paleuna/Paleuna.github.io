@@ -1,123 +1,49 @@
 /*******************************************************************************
- * Layout — generous whitespace, narrow readable column
+ * Layout — minimal changes from original, keep profile size intact
  ******************************************************************************/
 @use "variables" as v;
 
 body {
   padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+
+  h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 70px;
+  }
 }
 
 body.fixed-top-nav {
-  padding-top: 70px;
+  padding-top: 62px;
 }
 
 body.sticky-bottom-footer {
   padding-bottom: 0;
 }
 
-// ── Main content container ───────────────────────────────────────────────────
 .container {
-  max-width: 820px !important;
+  max-width: v.$max-content-width;
 }
 
-// ── About page layout ────────────────────────────────────────────────────────
-.post {
-  margin-top: 3rem;
-
-  .post-header {
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--global-divider-color);
-  }
-
-  .post-title {
-    margin-bottom: 0.3rem;
-  }
-}
-
-// ── Profile image ────────────────────────────────────────────────────────────
-.profile {
-  margin-left: 2.5rem;
-  margin-bottom: 1.5rem;
-
-  img {
-    width: 200px;
-    border-radius: 1px;
-    filter: saturate(0.88) contrast(1.03);
-    box-shadow: 0 2px 20px rgba(42, 37, 32, 0.1);
-  }
-
-  .address, .more-info {
-    margin-top: 0.75rem;
-    text-align: center;
-    width: 200px;
-  }
-}
-
-// ── Social icons below bio ───────────────────────────────────────────────────
-.social {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--global-divider-color);
-
-  a {
-    font-size: 1.3rem;
-    margin-right: 0.8rem;
-    border-bottom: none !important;
-
-    i { color: var(--global-text-color-light) !important; }
-    &:hover i { color: var(--global-theme-color) !important; }
-  }
-}
-
-// ── Selected papers on about page ────────────────────────────────────────────
-.selected-papers {
-  margin-top: 3rem;
-
-  h2 {
-    font-size: 0.8rem !important;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-style: normal !important;
-    font-weight: 500 !important;
-    color: var(--global-text-color-light) !important;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--global-divider-color);
-  }
-}
-
-// ── Footer ───────────────────────────────────────────────────────────────────
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
+  font-size: 0.75rem;
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 10px;
+    padding-top: 9px;
     padding-bottom: 9px;
-    text-align: center;
   }
 
   a {
     color: var(--global-footer-link-color) !important;
-    border-bottom: none !important;
     &:hover { color: var(--global-theme-color) !important; }
   }
 }
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  text-align: center;
-}
-
-// ── Back to top ──────────────────────────────────────────────────────────────
-#back-to-top {
-  border-radius: 1px !important;
-  width: v.$back-to-top-width;
-  height: v.$back-to-top-height;
-  bottom: v.$back-to-top-bottom;
-  right: v.$back-to-top-right;
-  z-index: v.$back-to-top-z-index;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 0.9rem;
 }
