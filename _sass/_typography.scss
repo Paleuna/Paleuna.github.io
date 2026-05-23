@@ -1,65 +1,51 @@
 /*******************************************************************************
- * Typography — EB Garamond body, Cormorant Garamond display
+ * Typography styles: Headings, text, links, tables, blockquotes
  ******************************************************************************/
+
 @use "variables" as v;
 
-// ── Import from Google Fonts (injected via head.liquid or here via @import) ──
-// Actual @import is in _includes/head.liquid — see font preconnect block.
-// Here we only set the font-family rules.
-
-body {
-  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
-  font-size: 1.05rem;
-  line-height: 1.82;
-  font-feature-settings: "liga" 1, "kern" 1;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: var(--global-text-color);
-}
-
-h1 { font-size: 2.1rem;  font-style: italic; font-weight: 300; }
-h2 { font-size: 1.55rem; font-style: italic; }
-h3 { font-size: 1.25rem; }
-h4 { font-size: 1.1rem; }
-
-p, li, span, strong, em, div {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+div,
+li,
+span,
+strong {
   color: var(--global-text-color);
 }
 
 hr {
   border-top: 1px solid var(--global-divider-color);
-  margin: 2.5rem 0;
 }
 
 table {
-  td, th {
-    font-size: 0.97rem;
-    padding: 0.25rem 1rem 0.25rem 0;
-  }
+  td,
   th {
-    font-weight: 600;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-size: 1rem;
+    padding: 1px 1rem 1px 0;
+  }
+
+  th {
+    font-weight: bold;
   }
 }
 
-a, table.table a {
+a,
+table.table a {
   color: var(--global-theme-color);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.18s ease, color 0.18s ease;
 
   &:hover {
-    color: var(--global-hover-color);
-    text-decoration: none;
-    border-bottom-color: var(--global-hover-color);
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+
+  &:hover:after :not(.nav-item.dropdown) {
+    width: 100%;
   }
 }
 
@@ -72,30 +58,79 @@ a, table.table a {
 
 blockquote {
   background: var(--global-bg-color);
-  border-left: 3px solid var(--global-theme-color);
-  margin: 2rem 0;
-  padding: 1rem 1.5rem;
-  font-size: 1.05rem;
-  font-style: italic;
+  border-left: 5px solid var(--global-theme-color);
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 1.2rem;
 
-  p { margin-bottom: 0; }
+  p {
+    margin-bottom: 0;
+  }
 
+  /* Tips, warnings, and dangers blockquotes */
   &.block-tip {
     border-color: var(--global-tip-block);
     background-color: var(--global-tip-block-bg);
-    em, li, p, strong { color: var(--global-tip-block-text); }
-    a, h1, h2, h3, h4, h5, h6 { color: var(--global-tip-block-title); }
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-tip-block-text);
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-tip-block-title);
+    }
   }
+
   &.block-warning {
     border-color: var(--global-warning-block);
     background-color: var(--global-warning-block-bg);
-    em, li, p, strong { color: var(--global-warning-block-text); }
-    a, h1, h2, h3, h4, h5, h6 { color: var(--global-warning-block-title); }
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-warning-block-text);
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-warning-block-title);
+    }
   }
+
   &.block-danger {
     border-color: var(--global-danger-block);
     background-color: var(--global-danger-block-bg);
-    em, li, p, strong { color: var(--global-danger-block-text); }
-    a, h1, h2, h3, h4, h5, h6 { color: var(--global-danger-block-title); }
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-danger-block-text);
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-danger-block-title);
+    }
   }
 }

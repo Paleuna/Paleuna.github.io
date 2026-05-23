@@ -1,48 +1,67 @@
 /*******************************************************************************
- * Themes — light (parchment) & dark (warm black)
+ * Themes
  ******************************************************************************/
 @use "variables" as v;
 @use "sass:color";
 
 :root {
   color-scheme: light;
-  --global-bg-color:              #{v.$parchment};
-  --global-code-bg-color:         #{v.$code-bg-color-light};
-  --global-text-color:            #{v.$ink};
-  --global-text-color-light:      #{v.$ink-light};
-  --global-theme-color:           #{v.$terracotta};
-  --global-hover-color:           #{v.$terracotta};
-  --global-hover-text-color:      #{v.$parchment};
-  --global-footer-bg-color:       #{v.$ink};
-  --global-footer-text-color:     #{v.$ink-faint};
-  --global-footer-link-color:     #{v.$parchment};
-  --global-distill-app-color:     #{v.$ink-light};
-  --global-divider-color:         rgba(42, 37, 32, 0.12);
-  --global-card-bg-color:         #{v.$parchment};
-  --global-highlight-color:       #{v.$terracotta};
-  --global-back-to-top-bg-color:  rgba(42, 37, 32, 0.35);
-  --global-back-to-top-text-color:#{v.$parchment};
-  --global-newsletter-bg-color:   #{v.$parchment};
-  --global-newsletter-text-color: #{v.$ink};
+  --global-bg-color: #{v.$white-color};
+  --global-code-bg-color: #{v.$code-bg-color-light};
+  --global-text-color: #{v.$black-color};
+  --global-text-color-light: #{v.$grey-color};
+  --global-theme-color: #{v.$purple-color};
+  --global-hover-color: #{v.$purple-color};
+  --global-hover-text-color: #{v.$white-color};
+  --global-footer-bg-color: #{v.$grey-color-dark};
+  --global-footer-text-color: #{v.$grey-color-light};
+  --global-footer-link-color: #{v.$white-color};
+  --global-distill-app-color: #{v.$grey-color};
+  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-card-bg-color: #{v.$white-color};
+  --global-highlight-color: #{v.$red-color-dark};
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel(v.$black-color, "red", v.$space: rgb)},
+    #{color.channel(v.$black-color, "green", v.$space: rgb)},
+    #{color.channel(v.$black-color, "blue", v.$space: rgb)},
+    0.4
+  );
+  --global-back-to-top-text-color: #{v.$white-color};
+  --global-newsletter-bg-color: #{v.$white-color};
+  --global-newsletter-text-color: #{v.$black-color};
 
-  --global-tip-block:       #3a7d5a;
-  --global-tip-block-bg:    #e8f5ee;
-  --global-tip-block-text:  #1e4a34;
-  --global-tip-block-title: #2d6348;
-  --global-warning-block:   #9a7b00;
-  --global-warning-block-bg:#fffae0;
-  --global-warning-block-text:#5a4800;
-  --global-warning-block-title:#7a6200;
-  --global-danger-block:    #{v.$terracotta};
-  --global-danger-block-bg: #{v.$terracotta-light};
-  --global-danger-block-text: color.adjust(v.$terracotta, $lightness: -20%);
-  --global-danger-block-title:#{v.$terracotta};
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #e2f5ec;
+  --global-tip-block-text: #215d42;
+  --global-tip-block-title: #359469;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #fff8d8;
+  --global-warning-block-text: #6b5900;
+  --global-warning-block-title: #b29400;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #ffe0e0;
+  --global-danger-block-text: #600;
+  --global-danger-block-title: #c00;
 
-  #light-toggle-system { display: inline-block; }
-  #light-toggle-dark   { display: none; }
-  #light-toggle-light  { display: none; }
-  .only-light { display: block; }
-  .only-dark  { display: none; }
+  #light-toggle-system {
+    display: inline-block;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  .only-light {
+    display: block;
+  }
+
+  .only-dark {
+    display: none;
+  }
 
   #back-to-top {
     color: var(--global-back-to-top-text-color);
@@ -57,45 +76,64 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color:              #{v.$dark-bg};
-  --global-code-bg-color:         #{v.$code-bg-color-dark};
-  --global-text-color:            #{v.$dark-text};
-  --global-text-color-light:      #{v.$dark-text-light};
-  --global-theme-color:           #{v.$dark-accent};
-  --global-hover-color:           #{v.$dark-accent};
-  --global-hover-text-color:      #{v.$dark-bg};
-  --global-footer-bg-color:       #{v.$dark-bg-card};
-  --global-footer-text-color:     #{v.$dark-text-light};
-  --global-footer-link-color:     #{v.$dark-text};
-  --global-distill-app-color:     #{v.$dark-text-light};
-  --global-divider-color:         rgba(232, 224, 213, 0.1);
-  --global-card-bg-color:         #{v.$dark-bg-card};
-  --global-back-to-top-bg-color:  rgba(232, 224, 213, 0.3);
-  --global-back-to-top-text-color:#{v.$dark-bg};
-  --global-newsletter-bg-color:   #{v.$dark-bg-card};
-  --global-newsletter-text-color: #{v.$dark-text};
+  --global-bg-color: #{v.$grey-color-dark};
+  --global-code-bg-color: #{v.$code-bg-color-dark};
+  --global-text-color: #{v.$grey-color-light};
+  --global-text-color-light: #{v.$grey-color};
+  --global-theme-color: #{v.$cyan-color};
+  --global-hover-color: #{v.$cyan-color};
+  --global-hover-text-color: #{v.$white-color};
+  --global-footer-bg-color: #{v.$grey-color-light};
+  --global-footer-text-color: #{v.$grey-color-dark};
+  --global-footer-link-color: #{v.$black-color};
+  --global-distill-app-color: #{v.$grey-color-light};
+  --global-divider-color: #424246;
+  --global-card-bg-color: #{v.$grey-900};
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel(v.$white-color, "red", v.$space: rgb)},
+    #{color.channel(v.$white-color, "green", v.$space: rgb)},
+    #{color.channel(v.$white-color, "blue", v.$space: rgb)},
+    0.5
+  );
+  --global-back-to-top-text-color: #{v.$black-color};
+  --global-newsletter-bg-color: #{v.$grey-color-light};
+  --global-newsletter-text-color: #{v.$grey-color-dark};
 
-  --global-tip-block:       #4a9d72;
-  --global-tip-block-bg:    #1a3d2a;
-  --global-tip-block-text:  #a8dfc0;
-  --global-tip-block-title: #d0f0e0;
-  --global-warning-block:   #d4aa00;
-  --global-warning-block-bg:#3a3000;
-  --global-warning-block-text:#ffe880;
-  --global-warning-block-title:#fff0a0;
-  --global-danger-block:    #{v.$dark-accent};
-  --global-danger-block-bg: rgba(201, 107, 85, 0.15);
-  --global-danger-block-text: color.adjust(v.$dark-accent, $lightness: 15%);
-  --global-danger-block-title:#{v.$dark-accent};
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #215d42;
+  --global-tip-block-text: #beffe2;
+  --global-tip-block-title: #e2f5ec;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #6b5900;
+  --global-warning-block-text: #fff2af;
+  --global-warning-block-title: #fff8d8;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #600;
+  --global-danger-block-text: #ffb9b9;
+  --global-danger-block-title: #ffe0e0;
 
-  .only-light { display: none; }
-  .only-dark  { display: block; }
+  .only-light {
+    display: none;
+  }
+
+  .only-dark {
+    display: block;
+  }
 }
 
 html[data-theme-setting="dark"] {
-  #light-toggle-system { display: none; }
-  #light-toggle-dark   { display: inline-block; }
-  #light-toggle-light  { display: none; }
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: inline-block;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
@@ -103,15 +141,23 @@ html[data-theme-setting="dark"] {
 }
 
 html[data-theme-setting="light"] {
-  #light-toggle-system { display: none; }
-  #light-toggle-dark   { display: none; }
-  #light-toggle-light  { display: inline-block; }
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: inline-block;
+  }
 }
 
-// Dark/light toggle icon — inherited from original
 .fa-half-sun-moon {
   position: relative;
   display: inline-block;
+
   --fa-font: var(--fa-font-solid);
   speak: none;
   font-style: normal;
@@ -119,9 +165,11 @@ html[data-theme-setting="light"] {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   width: 1em;
   height: 1em;
 }
+
 .fa-half-sun-moon::before,
 .fa-half-sun-moon::after {
   content: "";
@@ -134,17 +182,27 @@ html[data-theme-setting="light"] {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   font: var(--fa-font);
 }
+
+/* Left half: MOON */
 .fa-half-sun-moon::before {
   content: "\f111";
   color: var(--global-text-color);
   clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
 }
+
+/* Right half: SUN */
 .fa-half-sun-moon::after {
   content: "\f185";
   color: var(--global-text-color);
   clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
-  right: -1.5px;
-  transform: translateX(-1px);
+  right: -1.5px; /* slight overflow to avoid right-edge clipping */
+  transform: translateX(-1px); /* visually re-center the sun half */
 }
-#light-toggle:hover .fa-half-sun-moon::before { color: var(--global-theme-color); }
-#light-toggle:hover .fa-half-sun-moon::after  { color: var(--global-theme-color); }
+
+#light-toggle:hover .fa-half-sun-moon::before {
+  color: var(--global-theme-color);
+}
+
+#light-toggle:hover .fa-half-sun-moon::after {
+  color: var(--global-theme-color);
+}
