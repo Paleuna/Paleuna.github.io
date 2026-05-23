@@ -7,18 +7,18 @@
   box-shadow: none !important;
   border-bottom: 1px solid var(--global-divider-color) !important;
   background-color: var(--global-bg-color) !important;
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
   backdrop-filter: blur(8px);
 }
 
 // Site name
 .navbar-brand {
   color: var(--global-text-color) !important;
-  font-family: 'Cormorant Garamond', serif !important;
+  font-family: 'EB Garamond', serif !important;
   font-style: italic !important;
   font-weight: 300 !important;
-  font-size: 1.25rem !important;
+  font-size: 1.5rem !important;
   letter-spacing: 0.03em !important;
   border-bottom: none !important;
 
@@ -30,8 +30,8 @@
 // Nav links
 .navbar-nav .nav-item .nav-link {
   color: var(--global-text-color-light) !important;
-  font-family: 'Cormorant Garamond', serif !important;
-  font-size: 0.92rem !important;
+  font-family: 'Inter', serif !important;
+  font-size: 1.05rem !important;
   letter-spacing: 0.08em !important;
   text-transform: lowercase !important;
   padding-left: 1rem !important;
