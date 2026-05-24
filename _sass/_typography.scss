@@ -121,3 +121,12 @@ footer {
   font-size: 0.78rem !important;
   letter-spacing: 0.03em !important;
 }
+
+table th, table td {
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+}
+
+table.table-sm th, table.table-sm td {
+  padding: .1rem !important;
+}
