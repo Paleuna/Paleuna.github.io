@@ -32,8 +32,18 @@ h4, .h4 { font-size: 1rem !important; }
 // Name on about page
 .post-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: 2rem !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important; 
   letter-spacing: -0.02em !important;
+}
+
+h1.post-title span.font-weight-bold {
+  font-weight: 600 !important;       
+  color: var(--global-text-color) !important;         
+}
+
+h1.post-title {
+  color: var(--global-text-color-light) !important;   
 }
 
 // Subtitle
