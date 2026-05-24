@@ -6,8 +6,8 @@ title: blank
 first_name: Zhimin
 middle_name:
 last_name: Hu
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+contact_note: 
+  
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Zhimin Hu — Ph.D. student in Cognition and Brain Science at Georgia Tech
 footer_text: © 2025 Zhimin Hu
