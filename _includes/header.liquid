@@ -4,7 +4,8 @@
     <div class="container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          {% if site.first_name %}
+          {% if site.title == 'blank' %}
+            {% if site.first_name %}
               <span class="name-first">{{- site.first_name -}}</span>
             {% endif %}
             {% if site.middle_name %}
@@ -17,10 +18,11 @@
             {{- site.title -}}
           {% endif %}
         </a>
-      {% elsif site.enable_navbar_social %}
-        <!-- Social Icons -->
-        <div class="navbar-brand social">{% social_links %}</div>
-      {% endif %}
+        {% elsif site.enable_navbar_social %}
+          <!-- Social Icons -->
+          <div class="navbar-brand social">{% social_links %}</div>
+        {% endif %}
+      
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed ml-auto"
