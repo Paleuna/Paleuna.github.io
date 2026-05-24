@@ -67,9 +67,18 @@ layout: default
     <!-- Social -->
     {% if page.social %}
       <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-
+        <div class="contact-icons">
+          {% social_links %}
+        </div>
         <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+    {% if site.clustrmaps %}
+      <div class="clustrmaps">
+        <script type="text/javascript" id="clustrmaps"
+          src="//cdn.clustrmaps.com/map_v2.js?d={{ site.clustrmaps }}&w=150&t=n&background=ffffff00&border_color=ffffff00">
+        </script>
       </div>
     {% endif %}
 

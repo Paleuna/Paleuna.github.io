@@ -24,6 +24,3 @@ I am a first year Ph.D. student in the [Cognition and Brain Science Program](htt
 My research sits at the intersection of cognitive science and artificial intelligence, with close collaborations in theoretical neuroscience. I study the mechanisms of sequential reasoning and decision making under resource constraints and the representational geometry of concepts in minds and models. I also develop agentic systems and methods for reasoning and planning.
 
 Before joining Georgia Tech, I worked as a Research Scientist intern at [miHoYo](https://www.mihoyo.com/en/) developing infra for LLM agent. Prior to that, I was an Algorithm Engineer intern at [Zhipu AI](https://www.zhipuai.cn/en/about) contributing to LLM pretraining & SFT, and a Research Assistant at the [Chinese Institute for Brain Research](https://en.cibr.ac.cn/home), advised by [Yatang Li](https://scholar.google.com/citations?user=0dqjyrkAAAAJ&hl=en), working on computational models of the visual cortex.
-
-
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=7JMHvj01-3GCyK6NhNDdeoWhvdD_R0q7NrUlDamwqJ0&cl=ffffff&w=a"></script>
