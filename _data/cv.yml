@@ -44,7 +44,7 @@ cv:
         start_date: "2025-06"
         end_date: "2025-08"
         highlights:
-          - Large-scale Infrastructure for LLM agent
+          - Large-scale Infrastructure for LLM Agent
           - Memory Architecture, Retrieval and Reasoning
           - Optimization of Interface between Agent and Backend  
 
