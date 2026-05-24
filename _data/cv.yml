@@ -21,7 +21,7 @@ cv:
         start_date: 2025
         end_date: Present
         highlights:
-          - School of Psychological and Brain Science & Interactive Computing
+          - TBD
 
       - institution: University of Wisconsin-Madison
         location: Madison, WI
@@ -30,7 +30,9 @@ cv:
         start_date: 2022
         end_date: 2024
         highlights:
-          - Department of Computer Science
+          - Conceptual Generalization of Human and LLM
+          - Spatial Navigation and Causal Analysis
+          - Computational Modeling of Animal Behavior
 
     Experience:
       - company: miHoYo — Inverse Entropy Research Team
@@ -40,8 +42,8 @@ cv:
         end_date: "2025-08"
         highlights:
           - Large-scale Infrastructure for LLM agent
-          - Memory Architecture, Retrieval and Reasoning Flow
-          - Optimization of Interface to Backend  
+          - Memory Architecture, Retrieval and Reasoning
+          - Optimization of Interface between Agent and Backend  
 
       - company: Chinese Institute for Brain Research
         position: Research Assistant
@@ -51,7 +53,7 @@ cv:
         highlights:
           - Computational Modeling of Visual Cortex
           - Self-supervised Learning of Visual Representations
-          - Neural Alignment, Visual Tuning 
+          - Brain Alignment and Neural Tuning 
 
       - company: Zhipu AI (Z.ai)
         position: Algorithm Engineer Intern
@@ -70,9 +72,14 @@ cv:
         position: PSYC 2012 Introduction to Research Method (TA)
         start_date: "2025-08"
         end_date: "2025-12"
+        highlights:
+          - Fall 2025
 
       - company: Georgia Tech
         location: Atlanta, GA
         position: CS 3790 Introduction to Cognitive Science (TA)
         start_date: "2026-01"
-        end_date: "2026-08"
+        end_date: "2026-05"
+        highlights:
+          - Spring 2026
+          - Summer 2026
