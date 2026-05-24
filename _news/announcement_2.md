@@ -5,4 +5,4 @@ inline: True
 related_posts: false
 ---
 
-Two papers are accepted to <a href="https://cognitivesciencesociety.org/cogsci-2026/">CogSci 2026</a>
+Two papers are accepted to <a href="https://cognitivesciencesociety.org/cogsci-2026/">CogSci 2026</a>.
