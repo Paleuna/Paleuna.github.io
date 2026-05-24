@@ -132,7 +132,11 @@ table.table-sm th, table.table-sm td {
   padding: .1rem !important;
 }
 
-.news table, .news th, .news td {
+.table-dark {
   background-color: transparent !important;
-  border-color: transparent !important;
+  
+  td, th, tr {
+    background-color: transparent !important;
+    color: var(--global-text-color) !important;
+  }
 }
