@@ -44,8 +44,9 @@ cv:
         start_date: "2025-06"
         end_date: "2025-08"
         highlights:
-          - Large-scale agent in games
-          - Scalable memory system for agents
+          - Infrastructure for running agents at scale in game
+          - Multi-agent interaction and communication
+          - Scalable memory system for agents 
 
       - company: Chinese Institute for Brain Research
         position: Research Assistant
@@ -66,9 +67,9 @@ cv:
         start_date: "2024-04"
         end_date: "2024-12"
         highlights:
-          - Continual pre-training and SFT of GLM-4
-          - Distributed cluster training
-          - Data mixture and evaluation design    
+          - Continual pre-training and SFT of GLM-4 (130B & 32B)
+          - Distributed cluster training (40+ GPUs)
+          - Training data mixture and evaluation design    
           
 
     Teaching:

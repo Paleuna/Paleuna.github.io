@@ -19,9 +19,9 @@
             {% if entry.name %}{{ entry.name }}{% elsif entry.company %}{{ entry.company }}{% elsif entry.organization %}{{ entry.organization }}{% endif %}
           {% endcapture %}
           {% if company_name != '' %}
-            <h5 class="title font-weight-bold ml-1 ml-md-4" style="color: var(--global-theme-color)">
+            <h6 class="title font-weight-bold ml-1 ml-md-4" style="color: var(--global-theme-color)">
               {% if entry.url %}<a href="{{ entry.url }}" target="_blank" rel="noopener">{{ company_name }}</a>{% else %}{{ company_name }}{% endif %}
-            </h5>
+            </h6>
           {% endif %}
 
           {% capture position_title %}
@@ -35,7 +35,7 @@
             {% if entry.location %}{{ entry.location }}{% endif %}
           {% endcapture %}
           {% if location != '' %}
-            <p class="ml-1 ml-md-4 mb-1" style="font-size: 0.9rem">
+            <p class="ml-1 ml-md-4 mb-1">
               <strong>Location</strong>: {{ location }}
             </p>
           {% endif %}
@@ -61,8 +61,9 @@
             {% endif %}
           {% endif %}
 
+          {% assign end_raw_lower = end_raw | downcase %}
           {% assign end_display = 'Present' %}
-          {% if end_raw != '' %}
+          {% if end_raw != '' and end_raw_lower != 'present' %}
             {% assign end_len = end_raw | size %}
             {% if end_len == 4 %}
               {% assign end_display = end_raw %}
@@ -83,7 +84,7 @@
           {% endif %}
 
           {% if duration != '' %}
-            <p class="ml-1 ml-md-4 mb-1" style="font-size: 0.9rem">
+            <p class="ml-1 ml-md-4 mb-1">
               <strong>Duration</strong>: {{ duration }}
             </p>
           {% endif %}
