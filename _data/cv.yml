@@ -7,7 +7,7 @@ cv:
     region: GA
     postalCode: 30332
   image: ""
-  summary: Ph.D. student at Georgia Tech working on reasoning and problem solving, language and thought and representational geometry.
+  summary: Ph.D. student at Georgia Tech working on reasoning and problem solving, concepts and representational geometry.
 
   social_networks:
     - network: GitHub
@@ -61,13 +61,13 @@ cv:
 
       - company: Zhipu AI (Z.ai)
         position: Algorithm Engineer Intern
-        url: https://www.zhipuai.cn/en
+        url: https://www.zhipuai.cn/en/about
         logo: /assets/img/company/zhipu.png
         location: Beijing, China
         start_date: "2024-04"
         end_date: "2024-12"
         highlights:
-          - Continual pre-training and SFT of GLM-4 (130B & 32B)
+          - Continual pretraining and SFT of GLM-4 (130B & 32B)
           - Distributed cluster training (40+ GPUs)
           - Training data mixture and evaluation design    
           
@@ -75,7 +75,7 @@ cv:
     Teaching:
       - company: Georgia Tech
         location: Atlanta, GA
-        position: PSYC 2012 Introduction to Research Method (TA)
+        position: PSYC 2012 Introduction to Research Methods (TA)
         start_date: "2025-08"
         end_date: "2025-12"
         highlights:
