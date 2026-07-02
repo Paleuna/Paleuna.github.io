@@ -1,13 +1,13 @@
 cv:
   name: Zhimin Hu
-  label: Ph.D. Student in Cognition and Brain Science Program
+  label: Ph.D. Student at Georgia Tech
   address:
     street: TSRB 228
     city: Atlanta
     region: GA
     postalCode: 30332
   image: ""
-  summary: Ph.D. student at Georgia Tech working on reasoning and problem solving, concept and representational geometry.
+  summary: I am a Ph.D. student in the Cognition and Brain Science Program at Georgia Tech working on reasoning and problem solving, concept and representational geometry.
 
   social_networks:
     - network: GitHub
