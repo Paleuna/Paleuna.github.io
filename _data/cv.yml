@@ -44,9 +44,9 @@ cv:
         start_date: "2025-06"
         end_date: "2025-08"
         highlights:
+          - Scalable memory system for agents 
           - Infrastructure for running agents at scale in game
           - Multi-agent interaction and communication
-          - Scalable memory system for agents 
 
       - company: Chinese Institute for Brain Research
         position: Research Assistant
