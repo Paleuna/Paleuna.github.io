@@ -7,7 +7,7 @@ cv:
     region: GA
     postalCode: 30332
   image: ""
-  summary: Ph.D. student at Georgia Tech working on reasoning and decision-making, language and thought and representational geometry.
+  summary: Ph.D. student at Georgia Tech working on reasoning and problem solving, language and thought and representational geometry.
 
   social_networks:
     - network: GitHub
@@ -19,54 +19,56 @@ cv:
     Education:
       - institution: Georgia Institute of Technology
         location: Atlanta, GA
+        url: https://www.gatech.edu/
+        logo: /assets/img/company/gatech.png
         area: Cognition and Brain Science
         studyType: Ph.D.
         start_date: 2025
         end_date: Present
-        highlights:
-          - TBD
-
+      
       - institution: University of Wisconsin-Madison
         location: Madison, WI
+        url: https://www.wisc.edu/
+        logo: /assets/img/company/uwmadison.png
         area: Computer Science
         studyType: B.S.
         start_date: 2022
         end_date: 2024
-        highlights:
-          - Conceptual Generalization of Human and LLM
-          - Spatial Navigation and Causal Analysis
-          - Computational Modeling of Animal Behavior
 
     Experience:
-      - company: miHoYo — Inverse Entropy Research Team
+      - company: miHoYo
         position: Research Scientist Intern
+        url: https://www.mihoyo.com/en/
+        logo: /assets/img/company/mihoyo.png
         location: Beijing, China
         start_date: "2025-06"
         end_date: "2025-08"
         highlights:
-          - Large-scale Infrastructure for LLM Agent
-          - Memory Architecture, Retrieval and Reasoning
-          - Optimization of Interface between Agent and Backend  
+          - Large-scale agent in games
+          - Scalable memory system for agents
 
       - company: Chinese Institute for Brain Research
         position: Research Assistant
+        url: https://en.cibr.ac.cn/home
+        logo: /assets/img/company/cibr.png
         location: Beijing, China
         start_date: "2024-08"
         end_date: "2025-06"
         highlights:
-          - Computational Modeling of Visual Cortex
-          - Self-supervised Learning of Visual Representations
-          - Brain Alignment and Neural Tuning 
+          - Computational modeling of dorsal visual cortex
+          - Self-supervised learning of visual representations
 
       - company: Zhipu AI (Z.ai)
         position: Algorithm Engineer Intern
+        url: https://www.zhipuai.cn/en
+        logo: /assets/img/company/zhipu.png
         location: Beijing, China
         start_date: "2024-04"
         end_date: "2024-12"
         highlights:
-          - LLM Pretrain & SFT for GLM4(0520) 32B and 130B
-          - LLM Agent for Strategic Reasoning in Games
-          - LoRA Fine-tuning for Text-to-SQL 
+          - Continual pre-training and SFT of GLM-4
+          - Distributed cluster training
+          - Data mixture and evaluation design    
           
 
     Teaching:
