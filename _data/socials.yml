@@ -13,6 +13,6 @@ github_username: Paleuna
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-  logo: /assets/img/social_media/twitter.png # can be png, svg, jpg
+  logo: fa-brands fa-x-twitter # can be png, svg, jpg
   title: Twitter
   url: https://x.com/paleunahu
