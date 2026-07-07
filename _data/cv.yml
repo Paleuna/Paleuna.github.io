@@ -89,3 +89,11 @@ cv:
         highlights:
           - Spring 2026
           - Summer 2026
+
+      - company: Georgia Tech
+        location: Atlanta, GA
+        position: CS 7651 Human and Machine Learning (TA)
+        start_date: "2026-08"
+        end_date: "2026-12"
+        highlights:
+          - Fall 2026
