@@ -9,8 +9,8 @@ last_name: Hu
 contact_note: 
   
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Zhimin Hu — Ph.D. student in Cognition and Brain Science at Georgia Tech
-footer_text: © 2025 Zhimin Hu
+  Zhimin Hu — Ph.D. student in Cognition and Brain Science Program at Georgia Tech
+footer_text: © 2026 Zhimin Hu
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: Zhimin Hu, cognitive science, LLM, Georgia Tech, reasoning, language, representational geometry
