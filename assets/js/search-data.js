@@ -36,8 +36,8 @@ ninja.data = [{
           section: "News",},{id: "news-i-ll-attend-the-diverse-intelligences-summit-2026-at-princeton-ai-lab",
           title: 'I’ll attend the Diverse Intelligences Summit 2026 at Princeton AI lab.',
           description: "",
-          section: "News",},{id: "news-one-paper-is-accepted-to-icml-mech-interp-2026-as-spotlight-23-800",
-          title: 'One paper is accepted to ICML Mech Interp 2026 as spotlight (23/800).',
+          section: "News",},{id: "news-one-paper-is-accepted-to-icml-mech-interp-2026-as-spotlight-23-801",
+          title: 'One paper is accepted to ICML Mech Interp 2026 as 🏆Spotlight (23/801).',
           description: "",
           section: "News",},{
         id: 'social-email',
