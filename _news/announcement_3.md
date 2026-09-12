@@ -5,4 +5,4 @@ inline: True
 related_posts: false
 ---
 
-One paper is accepted to <a href="https://mechinterpworkshop.com/">ICML Mech Interp 2026</a> as 🏆Spotlight (23/801).
+One paper is accepted to <a href="https://mechinterpworkshop.com/">ICML Mech Interp 2026</a> as a 🏆Spotlight (23/801).
