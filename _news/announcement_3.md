@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2026-06-11
+date: 2026-10-01
 inline: True
 related_posts: false
 ---
 
-One paper is accepted to <a href="https://mechinterpworkshop.com/">ICML Mech Interp 2026</a> as a 🏆Spotlight (23/801).
+One paper is accepted to <a href="https://interpretability4discovery.github.io/">NeurIPS Interp4Discovery 2026</a>.

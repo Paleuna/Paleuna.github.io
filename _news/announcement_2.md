@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2026-04-08
+date: 2026-06-11
 inline: True
 related_posts: false
 ---
 
-Two papers are accepted to <a href="https://cognitivesciencesociety.org/cogsci-2026/">CogSci 2026</a>.
+One paper is accepted to <a href="https://mechinterpworkshop.com/">ICML Mech Interp 2026</a> as a 🏆Spotlight (23/801).
