@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2026-06-01
-inline: true
+date: 2026-04-08
+inline: True
 related_posts: false
 ---
 
-I'll attend the <a href="https://nam.ai.princeton.edu/events/2026/diverse-intelligences-summit-2026">Diverse Intelligences Summit</a> 2026 at Princeton AI lab.
+Two papers are accepted to <a href="https://cognitivesciencesociety.org/cogsci-2026/">CogSci 2026</a>.
