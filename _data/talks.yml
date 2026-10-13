@@ -13,16 +13,16 @@
 #   event_url: "https://example.org/event"   # optional
 
 - title: "Using Mechanistic Interpretability for Cognitive Science"
-   date: 2026-10-12
-   event: "Human and Machine Learning"
-   type: "Guest lecture"
-   location: "Atlanta, GA"
-   description: "This lecture introduces mechanistic interpretability as an approach to understanding how artificial neural networks represent information and perform computations. We will explore key techniques, examine discoveries about AI cognition, and discuss how to move from observing internal structures to building mechanistic explanations. Finally, we will consider what understanding neural networks can—and cannot—tell us about human cognition."
+  date: 2026-10-12
+  event: "Human and Machine Learning"
+  type: "Guest lecture"
+  location: "Atlanta, GA"
+  description: "This lecture introduces mechanistic interpretability as an approach to understanding how artificial neural networks represent information and perform computations. We will explore key techniques, examine discoveries about AI cognition, and discuss how to move from observing internal structures to building mechanistic explanations. Finally, we will consider what understanding neural networks can—and cannot—tell us about human cognition."
 
 
 - title: "Language Models Represent and Transform Concepts with Shared Geometry"
-   date: 2026-10-16
-   event: "ML Seminar Series at Georgia Tech"
-   type: "Invited talk"
-   location: "Atlanta, GA"
-   description: "How concepts are represented in neural networks is a fundamental question in machine learning. The dominant view treats them as stationary geometric objects. Yet concepts appear in context, and context transforms them. Drawing from neural population geometry, we formalize concept representations as point-cloud manifolds and contextual transformations as vector fields, and instantiate this framework in large language models. Across six model families of varying scales, we find that context moves each concept differently. The variance in these displacements is semantically organized, correlating with lexical concreteness and density. Importantly, both the concepts being transformed and this variance structure are shared across models: displacement structure transported from one model predicts held-out displacements in other models significantly above chance. Together, these findings show that models share a common geometry not only in how concepts are represented, but importantly in how context transforms them, a structure with richer organization than prior work has recognized."
+  date: 2026-10-16
+  event: "ML Seminar Series at Georgia Tech"
+  type: "Invited talk"
+  location: "Atlanta, GA"
+  description: "How concepts are represented in neural networks is a fundamental question in machine learning. The dominant view treats them as stationary geometric objects. Yet concepts appear in context, and context transforms them. Drawing from neural population geometry, we formalize concept representations as point-cloud manifolds and contextual transformations as vector fields, and instantiate this framework in large language models. Across six model families of varying scales, we find that context moves each concept differently. The variance in these displacements is semantically organized, correlating with lexical concreteness and density. Importantly, both the concepts being transformed and this variance structure are shared across models: displacement structure transported from one model predicts held-out displacements in other models significantly above chance. Together, these findings show that models share a common geometry not only in how concepts are represented, but importantly in how context transforms them, a structure with richer organization than prior work has recognized."
