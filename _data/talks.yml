@@ -12,17 +12,37 @@
 #   video: "https://example.org/recording"   # optional
 #   event_url: "https://example.org/event"   # optional
 
+- title: "Language Models Represent and Transform Concepts with Shared Geometry"
+  date: 2026-10-16
+  event: "ML Seminar Series at Georgia Tech"
+  type: "Selected Presentation"
+  location: "Atlanta, GA"
+  description: "How concepts are represented in neural networks is a fundamental question in machine learning. The dominant view treats them as stationary geometric objects. Yet concepts appear in context, and context transforms them. Drawing from neural population geometry, we formalize concept representations as point-cloud manifolds and contextual transformations as vector fields, and instantiate this framework in large language models. Across six model families of varying scales, we find that context moves each concept differently. The variance in these displacements is semantically organized, correlating with lexical concreteness and density. Importantly, both the concepts being transformed and this variance structure are shared across models: displacement structure transported from one model predicts held-out displacements in other models significantly above chance. Together, these findings show that models share a common geometry not only in how concepts are represented, but importantly in how context transforms them, a structure with richer organization than prior work has recognized."
+
 - title: "Using Mechanistic Interpretability for Cognitive Science"
   date: 2026-10-12
-  event: "CS 7651: Human and Machine Learning"
+  event: "CS 7651: Human and Machine Learning, Georgia Tech"
   type: "Guest lecture"
   location: "Atlanta, GA"
   description: "Understanding how neural networks produce intelligent behavior requires more than observing what they can do. Mechanistic interpretability offers a way to investigate the internal representations and computations underlying their capabilities. In this lecture, I introduce a broad perspective on mechanistic interpretability, surveying approaches ranging from individual neurons and circuits to population geometry and dynamical systems. Through case studies of world representations, planning, and belief tracking in neural networks, I illustrate how internal observations can be developed into mechanistic explanations, and what makes such explanations scientifically meaningful. Drawing on parallel lessons from cognitive science and mechanistic interpretability, I then discuss a framework for rigorous mechanistic inference and consider how understanding artificial neural networks might contribute to our broader understanding of cognition, as well as the challenges that remain."
 
+- title: "Are More Tokens Rational? Inference-Time Scaling in Language Models as Adaptive Resource Rationality"
+  date: 2026-07-24
+  event: "48th Annual Meeting of the Cognitive Science Society"
+  type: "flash talk (online)"
+  location: "Rio, Brazil"
+  description: "Human reasoning is shaped by resource rationality - optimizing performance under constraints. Recently, inference-time scaling has emerged as a powerful paradigm to improve the reasoning performance of Large Language Models by expanding test-time computation. Specifically, instruction-tuned (IT) models explicitly generate long reasoning steps during inference, whereas Large Reasoning Models (LRMs) are trained by reinforcement learning to discover reasoning paths that maximize accuracy. However, it remains unclear whether resource-rationality can emerge from such scaling without explicit reward related to computational costs. We introduce a Variable Attribution Task in which models infer which variables determine outcomes given candidate variables, input-output trials, and predefined logical functions. By varying the number of candidate variables and trials, we systematically manipulate task complexity. Both models exhibit a transition from brute-force to analytic strategies as complexity increases. IT models degrade on XOR and XNOR functions, whereas LRMs remain robust. These findings suggest that models can adjust their reasoning behavior in response to task complexity, even without explicit cost-based reward. It provides compelling evidence that resource rationality is an emergent property of inference-time scaling itself."
 
-- title: "Language Models Represent and Transform Concepts with Shared Geometry"
-  date: 2026-10-16
-  event: "ML Seminar Series at Georgia Tech"
-  type: "Invited talk"
+- title: "The Representational Geometry of Number"
+  date: 2026-07-24
+  event: "48th Annual Meeting of the Cognitive Science Society"
+  type: "flash talk (online)"
+  location: "Rio, Brazil"
+  description: "A central question in cognitive science is whether conceptual representations converge onto a shared manifold to support generalization, or diverge into orthogonal subspaces to minimize task interference. While prior work has discovered evidence for both, a mechanistic account of how these properties coexist and transform across tasks remains elusive. We propose that representational sharing lies not in the concepts themselves, but in the geometric relations between them. Using number concepts as a testbed and language models as high-dimensional computational substrates, we show that number representations preserve a stable relational structure across tasks. Task-specific representations are embedded in distinct subspaces, with low-level features like magnitude and parity encoded along separable linear directions. Crucially, we find that these subspaces are largely transformable into one another via linear mappings, indicating that representations share relational structure despite being located in distinct subspaces. Together, these results provide a mechanistic lens of how language models balance the shared structure of number representation with functional flexibility. It suggests that understanding arises when task-specific transformations are applied to a shared underlying relational structure of conceptual representations."
+
+- title: "The Shape of Solutions: How Learning Environments Sculpt the Mechanisms of Cognition"
+  date: 2025-08-27
+  event: "Brown Bag Seminar, Georgia Tech"
+  type: "Departmental presentation"
   location: "Atlanta, GA"
-  description: "How concepts are represented in neural networks is a fundamental question in machine learning. The dominant view treats them as stationary geometric objects. Yet concepts appear in context, and context transforms them. Drawing from neural population geometry, we formalize concept representations as point-cloud manifolds and contextual transformations as vector fields, and instantiate this framework in large language models. Across six model families of varying scales, we find that context moves each concept differently. The variance in these displacements is semantically organized, correlating with lexical concreteness and density. Importantly, both the concepts being transformed and this variance structure are shared across models: displacement structure transported from one model predicts held-out displacements in other models significantly above chance. Together, these findings show that models share a common geometry not only in how concepts are represented, but importantly in how context transforms them, a structure with richer organization than prior work has recognized."
+  description: "A central goal of cognitive science and artificial intelligence is to understand how a system's learning environment shapes the internal mechanisms that give rise to intelligent behavior. This relationship, however, is far from uniform; rather, it spans a spectrum of possible outcomes. At one end, complex informational environments can serve as powerful constraints, steering learners toward a convergent behavior. At the other, less-constrained environments can foster radical divergence in behaviors and underlying mechanisms—a phenomenon known as degeneracy. In this talk, I will explore both sides of this dynamic. I will begin by discussing a study examining whether large language models (LLMs) can acquire a core human conceptual distinction—the difference between principled and statistical truths—purely from text. While earlier models failed, we show that GPT‑4 succeeds, suggesting that a sufficiently rich informational environment can bootstrap a human-like cognitive ability previously thought to be unlearnable. In contrast, I will present a study on artificial agents evolved to solve a spatial navigation task. Here, we find a striking degree of degeneracy: even agents exhibiting nearly identical behaviors possess radically different internal computational structures, revealing a many-to-one mapping from mechanism to function."
