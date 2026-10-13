@@ -24,7 +24,7 @@ ninja.data = [{
             window.location.href = "/blog/";
           },
         },{id: "nav-talks",
-          title: "talks",
+          title: "Talks",
           description: "Talks, lectures, and presentations.",
           section: "Navigation",
           handler: () => {
