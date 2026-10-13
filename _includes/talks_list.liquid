@@ -5,33 +5,79 @@
   {% for talk in talks %}
     {% assign talk_year = talk.date | date: '%Y' %}
     {% if talk_year != previous_year %}
-      <h2 class="mt-4 mb-3">{{ talk_year }}</h2>
+      {% unless forloop.first %}</section>{% endunless %}
+      <section class="talks-year-group" aria-label="Talks in {{ talk_year }}">
+        <h2 class="talks-year-heading"><span>{{ talk_year }}</span></h2>
       {% assign previous_year = talk_year %}
     {% endif %}
-    <div class="mb-4 pb-3 border-bottom">
-      <h3 class="mb-1">{{ talk.title }}</h3>
-      <p class="post-meta mb-2">
-        {{ talk.date | date: '%B %d, %Y' }}
-        {% if talk.event %}&nbsp; &middot; &nbsp; {{ talk.event }}{% endif %}
-        {% if talk.type %}&nbsp; &middot; &nbsp; {{ talk.type }}{% endif %}
-        {% if talk.location %}&nbsp; &middot; &nbsp; {{ talk.location }}{% endif %}
-      </p>
-      {% if talk.description %}<p class="mb-2">{{ talk.description }}</p>{% endif %}
-      {% if talk.slides %}
-        {% assign slides_url = talk.slides %}
-        {% unless talk.slides contains '://' %}
-          {% assign slides_url = talk.slides | relative_url %}
-        {% endunless %}
-        <a class="btn btn-sm z-depth-0" href="{{ slides_url }}" target="_blank" rel="noopener noreferrer">Slides</a>
-      {% endif %}
-      {% if talk.video %}
-        <a class="btn btn-sm z-depth-0" href="{{ talk.video }}" target="_blank" rel="noopener noreferrer">Video</a>
-      {% endif %}
-      {% if talk.event_url %}
-        <a class="btn btn-sm z-depth-0" href="{{ talk.event_url }}" target="_blank" rel="noopener noreferrer">Event</a>
-      {% endif %}
-    </div>
+    <article class="talks-entry">
+      <div class="talks-entry__date">
+        <time datetime="{{ talk.date | date: '%Y-%m-%d' }}" aria-label="{{ talk.date | date: '%B %-d, %Y' }}">
+          <span class="talks-entry__month">{{ talk.date | date: '%b' }}</span>
+          <span class="talks-entry__day">{{ talk.date | date: '%-d' }}</span>
+        </time>
+      </div>
+      <div class="talks-entry__content">
+        {% if talk.type %}
+          <div class="talks-entry__eyebrow">{{ talk.type | escape }}</div>
+        {% endif %}
+        <h3 class="talks-entry__title">{{ talk.title | escape }}</h3>
+        {% if talk.event or talk.location %}
+          <div class="talks-entry__venue">
+            {% if talk.event %}<span class="talks-entry__event">{{ talk.event | escape }}</span>{% endif %}
+            {% if talk.event and talk.location %}<span class="talks-entry__separator" aria-hidden="true">&middot;</span>{% endif %}
+            {% if talk.location %}<span>{{ talk.location | escape }}</span>{% endif %}
+          </div>
+        {% endif %}
+
+        {% if talk.description %}
+          {% assign abstract_length = talk.description | number_of_words %}
+          {% if abstract_length > 44 %}
+            <details class="talks-entry__abstract">
+              <summary>
+                <span class="talks-entry__teaser">{{ talk.description | strip_html | truncatewords: 34 | escape }}</span>
+                <span class="talks-entry__abstract-action">
+                  <span class="talks-entry__show">Read abstract</span>
+                  <span class="talks-entry__hide">Hide abstract</span>
+                  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </span>
+              </summary>
+              <div class="talks-entry__abstract-full">{{ talk.description | markdownify }}</div>
+            </details>
+          {% else %}
+            <p class="talks-entry__teaser">{{ talk.description | escape }}</p>
+          {% endif %}
+        {% endif %}
+
+        {% if talk.slides or talk.video or talk.event_url %}
+          <div class="talks-entry__links" aria-label="Resources for this talk">
+            {% if talk.slides %}
+              {% assign slides_url = talk.slides %}
+              {% unless talk.slides contains '://' %}
+                {% assign slides_url = talk.slides | relative_url %}
+              {% endunless %}
+              <a href="{{ slides_url | escape }}" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Slides <span aria-hidden="true">↗</span></a>
+            {% endif %}
+            {% if talk.video %}
+              {% assign video_url = talk.video %}
+              {% unless talk.video contains '://' %}
+                {% assign video_url = talk.video | relative_url %}
+              {% endunless %}
+              <a href="{{ video_url | escape }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-play" aria-hidden="true"></i> Video <span aria-hidden="true">↗</span></a>
+            {% endif %}
+            {% if talk.event_url %}
+              {% assign event_url = talk.event_url %}
+              {% unless talk.event_url contains '://' %}
+                {% assign event_url = talk.event_url | relative_url %}
+              {% endunless %}
+              <a href="{{ event_url | escape }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Event <span aria-hidden="true">↗</span></a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </article>
   {% endfor %}
+  </section>
 {% else %}
   <p>Talks and presentations will appear here as they become available.</p>
 {% endif %}

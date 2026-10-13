@@ -1,0 +1,219 @@
+/* Talks page — compact editorial timeline, scoped to .talks-list.
+   Uses the site's theme variables so light/dark modes work automatically. */
+
+.talks-list {
+  margin-top: 2rem;
+
+  .talks-year-group + .talks-year-group {
+    margin-top: 2.5rem;
+  }
+
+  .talks-year-heading {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    margin: 0 0 0.35rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em;
+    color: var(--global-theme-color) !important;
+
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--global-divider-color);
+    }
+  }
+
+  .talks-entry {
+    display: grid;
+    grid-template-columns: 4.2rem minmax(0, 1fr);
+    column-gap: 1.8rem;
+    padding: 1.85rem 0 2.1rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .talks-entry__date {
+    padding-top: 0.2rem;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+
+    time {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .talks-entry__month {
+    font-size: 0.71rem;
+    font-weight: 650;
+    letter-spacing: 0.11em;
+    line-height: 1.35;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  .talks-entry__day {
+    margin-top: 0.16rem;
+    font-size: 1.85rem;
+    font-weight: 650;
+    letter-spacing: -0.055em;
+    line-height: 1.1;
+    color: var(--global-text-color);
+  }
+
+  .talks-entry__content {
+    min-width: 0;
+  }
+
+  .talks-entry__eyebrow {
+    margin-bottom: 0.55rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.71rem;
+    font-weight: 650;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+  }
+
+  // Explicitly override the site's global !important h3 styling.
+  .talks-entry__title {
+    margin: 0 0 0.62rem !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: clamp(1.23rem, 2.3vw, 1.48rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.028em !important;
+    line-height: 1.32 !important;
+    color: var(--global-text-color) !important;
+  }
+
+  .talks-entry__venue {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.25rem;
+    align-items: baseline;
+    margin-bottom: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--global-text-color-light);
+  }
+
+  .talks-entry__event {
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+
+  .talks-entry__separator {
+    opacity: 0.65;
+  }
+
+  .talks-entry__teaser {
+    display: block;
+    margin: 0 !important;
+    font-family: 'Merriweather', serif !important;
+    font-size: 0.84rem !important;
+    line-height: 1.78 !important;
+    color: var(--global-text-color-light);
+  }
+
+  .talks-entry__abstract {
+    margin: 0;
+
+    summary {
+      display: block;
+      list-style: none;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 5px;
+    }
+
+    .talks-entry__abstract-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.55rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.77rem;
+      font-weight: 600;
+      color: var(--global-theme-color);
+    }
+
+    .talks-entry__abstract-action i {
+      font-size: 0.63rem;
+      transition: transform 0.18s ease;
+    }
+
+    .talks-entry__hide { display: none; }
+
+    &[open] {
+      .talks-entry__teaser { display: none; }
+      .talks-entry__show { display: none; }
+      .talks-entry__hide { display: inline; }
+      .talks-entry__abstract-action i { transform: rotate(180deg); }
+    }
+  }
+
+  .talks-entry__abstract-full {
+    padding-top: 0.7rem;
+    font-size: 0.85rem;
+    line-height: 1.77;
+    color: var(--global-text-color-light);
+
+    p {
+      margin: 0 0 0.6rem !important;
+      font-size: inherit !important;
+      line-height: inherit !important;
+    }
+  }
+
+  .talks-entry__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+    margin-top: 1.1rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.38rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.79rem;
+      font-weight: 600;
+      color: var(--global-theme-color);
+
+      &:hover { text-decoration: underline; }
+      &:focus-visible { outline-offset: 4px; }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .talks-list {
+    margin-top: 1.5rem;
+
+    .talks-entry {
+      grid-template-columns: 3.3rem minmax(0, 1fr);
+      column-gap: 0.95rem;
+      padding: 1.5rem 0 1.75rem;
+    }
+
+    .talks-entry__day { font-size: 1.55rem; }
+    .talks-entry__title { font-size: 1.2rem !important; }
+    .talks-entry__venue { font-size: 0.81rem; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .talks-list .talks-entry__abstract-action i { transition: none; }
+}

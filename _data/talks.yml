@@ -14,10 +14,10 @@
 
 - title: "Using Mechanistic Interpretability for Cognitive Science"
   date: 2026-10-12
-  event: "Human and Machine Learning"
+  event: "CS 7651: Human and Machine Learning"
   type: "Guest lecture"
   location: "Atlanta, GA"
-  description: "This lecture introduces mechanistic interpretability as an approach to understanding how artificial neural networks represent information and perform computations. We will explore key techniques, examine discoveries about AI cognition, and discuss how to move from observing internal structures to building mechanistic explanations. Finally, we will consider what understanding neural networks can—and cannot—tell us about human cognition."
+  description: "Understanding how neural networks produce intelligent behavior requires more than observing what they can do. Mechanistic interpretability offers a way to investigate the internal representations and computations underlying their capabilities. In this lecture, I introduce a broad perspective on mechanistic interpretability, surveying approaches ranging from individual neurons and circuits to population geometry and dynamical systems. Through case studies of world representations, planning, and belief tracking in neural networks, I illustrate how internal observations can be developed into mechanistic explanations, and what makes such explanations scientifically meaningful. Drawing on parallel lessons from cognitive science and mechanistic interpretability, I then discuss a framework for rigorous mechanistic inference and consider how understanding artificial neural networks might contribute to our broader understanding of cognition, as well as the challenges that remain."
 
 
 - title: "Language Models Represent and Transform Concepts with Shared Geometry"
