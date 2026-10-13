@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{% assign archive_posts = page.documents | sort: 'date' | reverse %}
+{% assign archive_title = page.title %}
+{% if page.type == 'category' %}
+  {% assign known_topic = site.data.blog_topics | where: 'slug', page.title | first %}
+  {% if known_topic %}
+    {% assign archive_title = known_topic.title %}
+  {% endif %}
+{% elsif page.type == 'year' %}
+  {% assign archive_title = page.date | date: '%Y' %}
+{% endif %}
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ archive_title }}</h1>
+    {% if page.type == 'category' and known_topic %}
+      <p class="post-description">{{ known_topic.description }}</p>
+    {% elsif page.type == 'tag' %}
+      <p class="post-description">Notes tagged with {{ page.title }}.</p>
+    {% elsif page.type == 'year' %}
+      <p class="post-description">Notes from {{ archive_title }}.</p>
+    {% endif %}
+    <p><a href="{{ '/blog/' | relative_url }}">&larr; All notes</a></p>
+  </header>
+
+  <ul class="post-list">
+    {% for post in archive_posts %}
+      <li>
+        <h3><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+        <p class="post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
+      </li>
+    {% else %}
+      <li><p>No notes in this archive yet.</p></li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,29 @@
+{% comment %}
+  The existing post layout refers to this file, but it was absent from the
+  supplied repository. Suggest other posts in the same category, if any.
+{% endcomment %}
+{% assign related_limit = site.related_blog_posts.max_related | default: 5 %}
+{% assign related_count = 0 %}
+{% capture related_list %}
+  {% for candidate in site.posts %}
+    {% if candidate.url != page.url and related_count < related_limit %}
+      {% assign same_topic = false %}
+      {% for category in page.categories %}
+        {% if candidate.categories contains category %}
+          {% assign same_topic = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      {% if same_topic %}
+        <li class="mb-2"><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
+        {% assign related_count = related_count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+{% if related_count > 0 %}
+  <div class="mt-5">
+    <h2>Related notes</h2>
+    <ul>{{ related_list }}</ul>
+  </div>
+{% endif %}

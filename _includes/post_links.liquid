@@ -1,0 +1,13 @@
+{% if page.links and page.links.size > 0 %}
+  <div class="mb-4">
+    {% for link in page.links %}
+      {% if link.label and link.url %}
+        {% assign link_target = link.url %}
+        {% unless link.url contains '://' %}
+          {% assign link_target = link.url | relative_url %}
+        {% endunless %}
+        <a class="btn btn-sm z-depth-0" href="{{ link_target }}" {% if link.url contains '://' %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

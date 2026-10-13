@@ -29,6 +29,12 @@ pagination:
   </div>
   {% endif %}
 
+{% comment %}Topic navigation is defined in _data/blog_topics.yml{% endcomment %}
+{% assign blog_page_number = paginator.page | default: 1 %}
+{% if blog_page_number == 1 %}
+  {% include blog_topics.liquid %}
+{% endif %}
+
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
   <div class="tag-category-list">
@@ -101,12 +107,17 @@ pagination:
 
 {% endif %}
 
+  <h2 class="mb-3">Latest notes</h2>
   <ul class="post-list">
 
     {% if page.pagination.enabled %}
       {% assign postlist = paginator.posts %}
     {% else %}
       {% assign postlist = site.posts %}
+    {% endif %}
+
+    {% if postlist == blank %}
+      <li><p>No notes published yet. Browse the topics above, or check back later.</p></li>
     {% endif %}
 
     {% for post in postlist %}

@@ -1,0 +1,18 @@
+# The four top-level Notes categories, in display order.
+# Use the `slug` in a post's `categories: [...]` front matter.
+# The archive link appears automatically once the first post is published.
+- slug: papers
+  title: Papers & Projects
+  description: Research stories, methods, and results behind my papers and ongoing projects.
+
+- slug: cognition
+  title: Cognition
+  description: Concepts, learning, reasoning, and the structure of minds.
+
+- slug: ai
+  title: AI
+  description: Language models, mechanistic understanding, and intelligent agents.
+
+- slug: research
+  title: Research
+  description: Scientific questions, methodology, and the practice of doing research.
