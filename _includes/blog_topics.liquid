@@ -1,30 +1,56 @@
-<section class="mb-5" aria-labelledby="notes-topics-heading">
-  <h2 id="notes-topics-heading" class="mb-2">Explore by topic</h2>
-  <p class="mb-3">Papers as research projects, and notes on the questions behind them.</p>
-  <div class="row">
+{% comment %}
+  Visual-only topic index. Categories and counts still come from
+  _data/blog_topics.yml and site.categories; no new page logic.
+{% endcomment %}
+<section class="blog-topics mb-5" aria-labelledby="notes-topics-heading" markdown="0">
+  <div class="blog-topics__intro">
+    <div>
+      <span class="blog-topics__eyebrow">TOPIC INDEX</span>
+      <h2 id="notes-topics-heading" class="blog-topics__heading">Explore by topic</h2>
+      <p class="blog-topics__subheading">Papers as research projects, and notes on the questions behind them.</p>
+    </div>
+    <span class="blog-topics__total">{{ site.data.blog_topics | size }} areas</span>
+  </div>
+
+  <div class="blog-topics__grid">
     {% for topic in site.data.blog_topics %}
       {% assign topic_posts = site.categories[topic.slug] %}
       {% assign topic_count = topic_posts | size %}
-      <div class="col-sm-6 mb-3">
+      <article class="blog-topic{% if topic_count == 0 %} blog-topic--empty{% endif %}">
         {% if topic_count > 0 %}
           {% capture topic_url %}/blog/category/{{ topic.slug }}/{% endcapture %}
-          <a href="{{ topic_url | relative_url }}" class="card hoverable h-100 text-decoration-none" aria-label="{{ topic.title | escape }}: {{ topic_count }} notes">
-            <div class="card-body">
-              <h3 class="card-title">{{ topic.title }}</h3>
-              <p class="card-text">{{ topic.description }}</p>
-              <small class="text-muted">{{ topic_count }} {% if topic_count == 1 %}note{% else %}notes{% endif %} &rarr;</small>
-            </div>
+          <a class="blog-topic__inner" href="{{ topic_url | relative_url }}" aria-label="{{ topic.title | escape }}: {{ topic_count }} notes">
+        {% else %}
+          <div class="blog-topic__inner">
+        {% endif %}
+          <div class="blog-topic__top">
+            <span class="blog-topic__index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            {% if topic_count > 0 %}
+              <span class="blog-topic__arrow" aria-hidden="true">↗</span>
+            {% else %}
+              <span class="blog-topic__dash" aria-hidden="true">—</span>
+            {% endif %}
+          </div>
+          <h3 class="blog-topic__title">{{ topic.title }}</h3>
+          <p class="blog-topic__description">{{ topic.description }}</p>
+          <div class="blog-topic__footer">
+            <span class="blog-topic__status">
+              {% if topic_count > 0 %}
+                {{ topic_count }} {% if topic_count == 1 %}note{% else %}notes{% endif %}
+              {% else %}
+                Coming soon
+              {% endif %}
+            </span>
+            {% if topic_count > 0 %}
+              <span class="blog-topic__cta">Browse notes <span aria-hidden="true">→</span></span>
+            {% endif %}
+          </div>
+        {% if topic_count > 0 %}
           </a>
         {% else %}
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="card-title">{{ topic.title }}</h3>
-              <p class="card-text">{{ topic.description }}</p>
-              <small class="text-muted">Coming soon</small>
-            </div>
           </div>
         {% endif %}
-      </div>
+      </article>
     {% endfor %}
   </div>
 </section>
