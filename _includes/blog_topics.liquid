@@ -1,56 +1,44 @@
 {% comment %}
-  Visual-only topic index. Categories and counts still come from
-  _data/blog_topics.yml and site.categories; no new page logic.
+  Topic cards for the Notes landing page.
+  Content: _data/blog_topics.yml. Counts and links: site.categories.
+  The whole populated card is clickable; unpublished topics remain visible.
 {% endcomment %}
-<section class="blog-topics mb-5" aria-labelledby="notes-topics-heading" markdown="0">
-  <div class="blog-topics__intro">
-    <div>
-      <span class="blog-topics__eyebrow">TOPIC INDEX</span>
-      <h2 id="notes-topics-heading" class="blog-topics__heading">Explore by topic</h2>
-      <p class="blog-topics__subheading">Papers as research projects, and notes on the questions behind them.</p>
-    </div>
-    <span class="blog-topics__total">{{ site.data.blog_topics | size }} areas</span>
+<section class="notes-topics mb-5" aria-labelledby="notes-topics-heading" markdown="0">
+  <div class="notes-topics__intro">
+    <h2 id="notes-topics-heading" class="notes-topics__heading">Explore by topic</h2>
+    <p class="notes-topics__subtitle">Papers as research projects, and notes on the questions behind them.</p>
   </div>
-
-  <div class="blog-topics__grid">
+  <div class="notes-topics__grid">
     {% for topic in site.data.blog_topics %}
       {% assign topic_posts = site.categories[topic.slug] %}
       {% assign topic_count = topic_posts | size %}
-      <article class="blog-topic{% if topic_count == 0 %} blog-topic--empty{% endif %}">
-        {% if topic_count > 0 %}
-          {% capture topic_url %}/blog/category/{{ topic.slug }}/{% endcapture %}
-          <a class="blog-topic__inner" href="{{ topic_url | relative_url }}" aria-label="{{ topic.title | escape }}: {{ topic_count }} notes">
-        {% else %}
-          <div class="blog-topic__inner">
-        {% endif %}
-          <div class="blog-topic__top">
-            <span class="blog-topic__index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+      {% if topic_count > 0 %}
+        {% capture topic_url %}/blog/category/{{ topic.slug }}/{% endcapture %}
+        <a class="notes-topic" href="{{ topic_url | relative_url }}" aria-label="{{ topic.title | escape }}: {{ topic_count }} notes">
+      {% else %}
+        <div class="notes-topic notes-topic--empty">
+      {% endif %}
+          <div class="notes-topic__top">
+            <span class="notes-topic__accent" aria-hidden="true"></span>
             {% if topic_count > 0 %}
-              <span class="blog-topic__arrow" aria-hidden="true">↗</span>
+              <span class="notes-topic__arrow" aria-hidden="true">↗</span>
+            {% endif %}
+          </div>
+          <h3 class="notes-topic__title">{{ topic.title }}</h3>
+          <p class="notes-topic__description">{{ topic.description }}</p>
+          <div class="notes-topic__footer">
+            {% if topic_count > 0 %}
+              <span>{{ topic_count }} {% if topic_count == 1 %}note{% else %}notes{% endif %}</span>
+              <span class="notes-topic__browse">Browse notes <span aria-hidden="true">→</span></span>
             {% else %}
-              <span class="blog-topic__dash" aria-hidden="true">—</span>
+              <span>Coming soon</span>
             {% endif %}
           </div>
-          <h3 class="blog-topic__title">{{ topic.title }}</h3>
-          <p class="blog-topic__description">{{ topic.description }}</p>
-          <div class="blog-topic__footer">
-            <span class="blog-topic__status">
-              {% if topic_count > 0 %}
-                {{ topic_count }} {% if topic_count == 1 %}note{% else %}notes{% endif %}
-              {% else %}
-                Coming soon
-              {% endif %}
-            </span>
-            {% if topic_count > 0 %}
-              <span class="blog-topic__cta">Browse notes <span aria-hidden="true">→</span></span>
-            {% endif %}
-          </div>
-        {% if topic_count > 0 %}
-          </a>
-        {% else %}
-          </div>
-        {% endif %}
-      </article>
+      {% if topic_count > 0 %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
 </section>
