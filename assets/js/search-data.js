@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "news-two-papers-are-accepted-to-cogsci-2026",
+        },{id: "post-using-mechanistic-interpretability-for-cognitive-science",
+        
+          title: "Using Mechanistic Interpretability for Cognitive Science",
+        
+        description: "What can looking inside artificial neural networks teach us about computation, intelligence, and human cognition?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/using-mechanistic-interpretability-for-cognitive-science/";
+          
+        },
+      },{id: "news-two-papers-are-accepted-to-cogsci-2026",
           title: 'Two papers are accepted to CogSci 2026.',
           description: "",
           section: "News",},{id: "news-one-paper-is-accepted-to-icml-mech-interp-2026-as-a-spotlight-23-801",
