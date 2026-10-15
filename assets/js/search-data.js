@@ -54,8 +54,8 @@ ninja.data = [{
           section: "News",},{id: "news-one-paper-is-accepted-to-icml-mech-interp-2026-as-a-spotlight-23-801",
           title: 'One paper is accepted to ICML Mech Interp 2026 as a 🏆Spotlight (23/801)....',
           description: "",
-          section: "News",},{id: "news-one-paper-is-accepted-to-neurips-interp4discovery-2026",
-          title: 'One paper is accepted to NeurIPS Interp4Discovery 2026.',
+          section: "News",},{id: "news-one-paper-is-accepted-to-neurips-interp4discovery-2026-as-oral-presentation",
+          title: 'One paper is accepted to NeurIPS Interp4Discovery 2026 as oral presentation.',
           description: "",
           section: "News",},{
         id: 'social-email',
