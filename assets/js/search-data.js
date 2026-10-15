@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-using-mechanistic-interpretability-for-cognitive-science",
+        },{id: "post-a-clean-neuron-is-not-yet-an-explanation",
+        
+          title: "A Clean Neuron is Not Yet an Explanation",
+        
+        description: "Why progress in reading individual neurons leaves the central questions of mechanistic interpretability open.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/a-clean-neuron-is-not-yet-an-explanation/";
+          
+        },
+      },{id: "post-using-mechanistic-interpretability-for-cognitive-science",
         
           title: "Using Mechanistic Interpretability for Cognitive Science",
         
@@ -55,7 +66,7 @@ ninja.data = [{
           title: 'One paper is accepted to ICML Mech Interp 2026 as a 🏆Spotlight (23/801)....',
           description: "",
           section: "News",},{id: "news-one-paper-is-accepted-to-neurips-interp4discovery-2026-as-oral-presentation",
-          title: 'One paper is accepted to NeurIPS Interp4Discovery 2026 as oral presentation.',
+          title: 'One paper is accepted to NeurIPS Interp4Discovery 2026 as 🏆Oral presentation.',
           description: "",
           section: "News",},{
         id: 'social-email',
