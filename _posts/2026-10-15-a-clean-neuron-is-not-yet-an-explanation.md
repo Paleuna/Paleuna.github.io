@@ -12,7 +12,7 @@ featured: false
 
 Nick Cammarata's [*Neural Networks Are Already Clean*](https://already-clean.goodfire.com/) makes a claim I would like to be true. Perhaps we have made neural networks look more tangled than they are. A neuron thought to respond separately to cats and cars may actually detect a shape they share. The dog neurons supposedly hiding information about cars may instead be part of a circuit for pose. Better tools and a closer look can correct these mistakes. That is a substantial finding. It challenges the assumption that every confusing neuron must be decomposed by a sparse autoencoder (SAE).
 
-There is independent evidence for taking native neurons seriously. [Arora et al. (2026)](https://proceedings.mlr.press/v306/arora26c.html) use MLP neurons to trace causal circuits for subject–verb agreement and a multi-hop factual task. If the model's own neurons can answer a question, we should study them.
+There is independent evidence for taking neurons seriously. [Arora et al. (2026)](https://proceedings.mlr.press/v306/arora26c.html) use MLP neurons to trace causal circuits for subject–verb agreement and a multi-hop factual task. If the model's own neurons can answer a question, we should study them.
 
 But a stronger conclusion is spreading alongside this result. It says that superposition was largely a mistake, that neuron and circuit maps are close to explaining modern models, and that the rest is a matter of scaling up investigation. I think this changes the question halfway through. We may learn to describe most neurons coherently without knowing which variables and operations explain a model's behavior.
 
