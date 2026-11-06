@@ -8,8 +8,6 @@ tags: [ai-for-science, peer-review, research-culture]
 featured: false
 ---
 
-## The problem
-
 The cost of generating a research paper is falling fast. The cost of reviewing one is not.
 
 We are already seeing the pressure. The [NeurIPS 2026 Position Paper Track](https://blog.neurips.cc/2026/06/02/ai-generated-papers-in-the-neurips-2026-position-paper-track/) announced that it would reject 178 submissions (18.4%) for breaking its AI-writing policy and ask another 123 (12.7%) to show evidence of substantial human involvement. [ICLR 2026](https://blog.iclr.cc/2025/11/19/iclr-2026-response-to-llm-generated-papers-and-reviews/) also reported concerns about AI-generated papers and reviews. These cases do not tell us how many papers were fully produced by AI. They do show that the current review system is under pressure.
