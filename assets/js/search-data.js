@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-a-clean-neuron-is-not-yet-an-explanation",
+        },{id: "post-ai-generated-papers-need-their-own-track",
+        
+          title: "AI-Generated Papers Need Their Own Track",
+        
+        description: "AI can produce papers faster than researchers can review them. Conferences need a fair way to handle that gap.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ai-generated-papers-need-their-own-track/";
+          
+        },
+      },{id: "post-a-clean-neuron-is-not-yet-an-explanation",
         
           title: "A Clean Neuron is Not Yet an Explanation",
         
