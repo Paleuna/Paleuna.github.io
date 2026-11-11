@@ -3,7 +3,7 @@ layout: post
 title: "AI-Generated Papers Need Their Own Track"
 date: 2026-11-05
 description: "AI can produce papers faster than researchers can review them. Conferences need a fair way to handle that gap."
-categories: [ai]
+categories: [ai, research]
 tags: [ai-for-science, peer-review, research-culture]
 featured: false
 ---
